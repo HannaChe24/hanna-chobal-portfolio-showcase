@@ -1,0 +1,201 @@
+/* Case-study reasoning blocks; scoped away from the interactive workspace. */
+.workflow-page .request-view-explanation { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; margin: 32px 0; align-items: start; }
+.workflow-page .request-view-copy > p:first-child { margin-top: 0; }
+.workflow-page .request-view-images { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.workflow-page .request-view-images figure { margin: 0; min-width: 0; }
+.workflow-page .request-view-images img { display: block; width: 100%; height: auto; border: 1px solid rgba(128,128,128,.35); }
+.workflow-page .request-view-images figcaption { margin-top: 10px; font-size: 13px; line-height: 1.4; }
+.workflow-page .request-view-images a:focus-visible { outline: 2px solid #49a85d; outline-offset: 4px; }
+@media (max-width: 900px) { .workflow-page .request-view-explanation { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 500px) { .workflow-page .request-view-images { grid-template-columns: minmax(0, 1fr); } }
+.workflow-page.service-workspace-case-page .decision-evidence { border-top-color: rgba(128,128,128,.35); }
+.workflow-page.service-workspace-case-page .decision-evidence:not(.architecture-answers) > div { grid-template-columns: minmax(0, 1fr) minmax(0, 4fr); }
+.workflow-page.service-workspace-case-page .decision-evidence:not(.architecture-answers) dt { font: inherit; font-size: 18px; line-height: 1.5; letter-spacing: normal; text-transform: none; overflow-wrap: normal; }
+@media (max-width: 700px) {
+  .workflow-page.service-workspace-case-page .decision-evidence:not(.architecture-answers) > div { grid-template-columns: minmax(0, 1fr); }
+}
+.workflow-page .decision-evidence.architecture-answers > div { grid-template-columns: minmax(0, 1.1fr) minmax(0, .75fr) minmax(0, 2fr); gap: 28px; align-items: start; }
+.workflow-page .decision-evidence.architecture-answers dt { font: 700 20px/1.4 var(--sans, sans-serif); letter-spacing: 0; overflow-wrap: normal; }
+.workflow-page .decision-evidence.architecture-answers { border-top-color: rgba(128,128,128,.35); }
+.workflow-page .decision-evidence.architecture-answers .architecture-answer { font: inherit; font-size: 18px; line-height: 1.5; letter-spacing: normal; padding-top: 0; }
+@media (max-width: 700px) {
+  .workflow-page .decision-evidence.architecture-answers > div { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .workflow-page .decision-evidence.architecture-answers .architecture-answer { padding-top: 0; }
+}
+.workflow-page .service-journey-copy { margin-top: 40px; }
+.workflow-page .service-journey-copy h3 { margin: 0 0 16px; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.2; }
+.workflow-page .service-journey-map { margin: 28px 0 0; width: 100%; }
+.workflow-page .service-journey-map > a { display: block; }
+.workflow-page .service-journey-map img { display: block; width: 100%; height: auto; border: 1px solid var(--case-line, #000); }
+.workflow-page .service-journey-map figcaption { margin-top: 12px; font: 12px/1.5 var(--mono, monospace); }
+.workflow-page .service-journey-map a:focus-visible { outline: 2px solid #49a85d; outline-offset: 5px; }
+.workflow-page .service-journey-map figcaption a:hover { color: #49a85d; }
+.workflow-page .design-reasoning { margin: 32px 0; padding-top: 24px; border-top: 1px solid rgba(128,128,128,.35); }
+.workflow-page .design-reasoning h3 { margin: 0 0 16px; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.2; }
+.workflow-page .design-reasoning p { font-size: 18px; line-height: 1.6; }
+.workflow-page .panel-options { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; margin: 24px 0; }
+.workflow-page .panel-options article { border: 1px solid rgba(128,128,128,.35); padding: 24px; min-width: 0; }
+.workflow-page .panel-options h4 { margin: 12px 0 20px; font-size: 22px; line-height: 1.3; }
+.workflow-page .panel-options .option-label { margin: 0; font: 12px/1.5 var(--mono,monospace); text-transform: uppercase; letter-spacing: .05em; }
+.workflow-page .state-rules-wrap { overflow-x: auto; margin: 24px 0; }
+.workflow-page .state-rules { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; text-align: left; }
+.workflow-page .state-rules th, .workflow-page .state-rules td { padding: 16px 12px; border-bottom: 1px solid rgba(128,128,128,.35); vertical-align: top; }
+.workflow-page .state-rules thead th { font: 12px/1.5 var(--mono,monospace); text-transform: uppercase; letter-spacing: .05em; }
+.workflow-page .state-rules tbody th { width: 23%; font-weight: 500; }
+.workflow-page .decision-evidence dt { overflow-wrap: anywhere; }
+@media(max-width:700px) {
+  .workflow-page .panel-options { grid-template-columns: 1fr; }
+  .workflow-page .panel-options article { padding: 20px; }
+  .workflow-page .state-rules { min-width: 580px; }
+}
+
+/* Project facts follow the horizontal editorial table used by YouControl. */
+.workflow-page.service-workspace-case-page .workflow-hero .case-role {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 0;
+  gap: 0;
+  margin-bottom: 32px;
+}
+.workflow-page.service-workspace-case-page .workflow-hero .case-role > div {
+  min-width: 0;
+  padding: 24px clamp(12px, 2vw, 28px);
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+.workflow-page.service-workspace-case-page .workflow-hero .case-role > div + div {
+  border-left: 1px solid var(--case-line);
+}
+.workflow-page.service-workspace-case-page .workflow-hero .case-role dt,
+.workflow-page.service-workspace-case-page .workflow-hero .case-role dd {
+  width: min(100%, 220px);
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 700px) {
+  .workflow-page.service-workspace-case-page .workflow-hero .case-role { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .workflow-page.service-workspace-case-page .workflow-hero .case-role > div:nth-child(3) { border-left: 0; }
+  .workflow-page.service-workspace-case-page .workflow-hero .case-role > div:nth-child(n+3) { border-top: 1px solid var(--case-line); }
+  .workflow-page.service-workspace-case-page .workflow-hero .case-role dt { font-size: 9px; }
+  .workflow-page.service-workspace-case-page .workflow-hero .case-role dd { font-size: 13px; }
+}
+
+/* One quiet introduction beneath the project title and facts. */
+.workflow-page.unified-case-page.service-workspace-case-page .workflow-hero {
+  padding-top: calc(var(--global-header-height, 48px) + clamp(40px, 4vw, 64px));
+  padding-bottom: clamp(48px, 5vw, 72px);
+}
+.workflow-page.service-workspace-case-page .workflow-hero > .case-label {
+  margin: 0 0 20px;
+}
+.workflow-page.service-workspace-case-page .workflow-hero h1 {
+  margin: 0 0 32px;
+}
+.workflow-page.service-workspace-case-page .workspace-intro {
+  max-width: 760px;
+}
+.workflow-page.unified-case-page.service-workspace-case-page .workspace-intro > p {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  font-size: clamp(18px, 1.4vw, 22px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.workflow-page.unified-case-page.service-workspace-case-page .workspace-intro > p + p {
+  margin-top: 16px;
+}
+
+.request-image-preview {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 80px 24px 24px;
+  border: 0;
+  background: #111;
+  color: #fff;
+  overflow: auto;
+}
+.request-image-preview::backdrop { background: #000c; }
+.request-image-preview[open] { display: grid; place-items: center; }
+.request-image-preview > img { display: block; max-width: 100%; max-height: calc(100dvh - 104px); object-fit: contain; }
+.request-image-preview-toolbar {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 24px;
+  border-bottom: 1px solid #555;
+  font: 500 13px/1.3 "DM Sans", sans-serif;
+}
+.request-image-preview-toolbar button {
+  padding: 12px 18px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #777;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.request-image-preview-toolbar button:hover { background: #fff; color: #111; }
+body:has(.request-image-preview[open]) { overflow: hidden; }
+.workflow-page .request-view-images a { display: block; padding: 0; outline: none; }
+
+/* Preview close controls match the site's modal icon. */
+html body :is(.request-image-preview-toolbar button, .feedback-preview-toolbar button, .product-lightbox-close) {
+  display: flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; min-width: 34px; min-height: 34px;
+  padding: 7px; border: 0; border-radius: 6px;
+  background: transparent; color: #fff; cursor: pointer;
+}
+html body :is(.request-image-preview-toolbar button, .feedback-preview-toolbar button, .product-lightbox-close) svg { width: 20px; height: 20px; }
+html body :is(.request-image-preview-toolbar button, .feedback-preview-toolbar button, .product-lightbox-close):hover { background: #333; color: #fff; }
+html body :is(.request-image-preview-toolbar button, .feedback-preview-toolbar button, .product-lightbox-close):focus-visible { outline: 2px solid #49a85d; outline-offset: 2px; }
+
+.competitor-map-svg { display:block; width:100%; aspect-ratio:3 / 2; height:auto; border:0; }
+
+.workflow-page.unified-case-page.service-workspace-case-page .screen-gallery.case-product-gallery { padding-bottom:clamp(40px, 4vw, 64px); }
+
+.workflow-page .request-view-images.completion-example { grid-template-columns:minmax(0,1fr); }
+
+/* Match the space above the prototype heading and below the interface. */
+.workflow-page.unified-case-page.service-workspace-case-page .screen-gallery.case-product-gallery {
+  padding-bottom: var(--case-rhythm);
+}
+.workflow-page.unified-case-page.service-workspace-case-page .case-product-gallery .screen-gallery-head {
+  padding-bottom: clamp(28px, 3vw, 40px);
+}
+.workflow-page.unified-case-page.service-workspace-case-page .case-product-gallery > .task-prototype:not(.is-focus-mode):not(.is-stage-locked) {
+  margin-top: 0 !important;
+}
+
+body[data-site-ui].workflow-page.service-workspace-case-page .case-product-gallery > .screen-gallery-head h2 { font-size:clamp(1.8rem,3.33vw,3.735rem); line-height:1; }
+
+.workflow-page .competitor-rationale { margin-top:24px; }
+.workflow-page .competitor-rationale summary { cursor:pointer; font-size:16px; line-height:1.5; }
+.workflow-page .competitor-rationale > p { margin-top:16px; }
+
+.workflow-page .prototype-rationale-link { justify-self:start; font-size:14px; line-height:1.5; text-decoration:underline; text-underline-offset:4px; }
+.workflow-page #design-rationale { scroll-margin-top:calc(var(--global-header-height,48px) + 24px); }
+
+/* The project facts already provide the divider before the introduction. */
+.workflow-page.unified-case-page.service-workspace-case-page .workflow-hero + .workflow-content > article:first-child {
+  border-top: 0;
+}
+/* Balance the facts table between the title and the introduction. */
+.workflow-page.unified-case-page.service-workspace-case-page .workflow-hero {padding-bottom:0;}
+.workflow-page.unified-case-page.service-workspace-case-page .workflow-hero h1 {margin-bottom:var(--case-content-gap);}
+.workflow-page.unified-case-page.service-workspace-case-page .workflow-hero + .workflow-content > article:first-child {padding-top:var(--case-content-gap);}
+/* Match the prototype-to-copy gap to the copy-to-divider gap. */
+.workflow-page.unified-case-page.service-workspace-case-page .screen-gallery.case-product-gallery {padding-bottom:0;}
+.workflow-page.unified-case-page.service-workspace-case-page #design-rationale > article:first-child {padding-top:var(--case-rhythm);padding-bottom:var(--case-rhythm);}

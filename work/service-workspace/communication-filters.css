@@ -1,0 +1,31 @@
+.task-prototype .tp-communication-toolbar { position:relative; display:flex; align-items:center; justify-content:space-between; gap:8px; padding:12px; }
+.task-prototype .tp-communication-filter-toggle { display:inline-flex; align-items:center; gap:6px; padding:8px; border:1px solid var(--tp-line); background:var(--tp-surface); color:var(--tp-text); font:500 12px/18px 'DM Sans',sans-serif; cursor:pointer; }
+.task-prototype .tp-communication-filter-toggle[aria-expanded="true"] { background:var(--tp-hover); }
+.task-prototype .tp-communication-filter-menu { position:absolute; top:calc(100% - 1px); left:12px; right:12px; z-index:30; padding:16px; border:1px solid var(--tp-line); background:var(--tp-surface); color:var(--tp-text); box-shadow:0 8px 22px #00000014; }
+.task-prototype .tp-communication-filter-menu[hidden] { display:none; }
+.task-prototype .tp-communication-filter-menu fieldset { border:0; padding:0; margin:0 0 16px; }
+.task-prototype .tp-communication-filter-menu legend { font:600 12px/20px 'DM Sans',sans-serif; margin-bottom:8px; }
+.task-prototype .tp-communication-filter-menu label { display:flex; align-items:center; gap:8px; padding:5px 0; font:400 12px/20px 'DM Sans',sans-serif; }
+.task-prototype .tp-communication-filter-menu input { width:16px; height:16px; margin:0; }
+.task-prototype [data-clear-communication] { background:none; border:0; color:var(--tp-text); text-decoration:underline; cursor:pointer; padding:4px 0; }
+.task-prototype .tp-communication-results .tp-message-row { position:relative; }
+.task-prototype .tp-communication-results .tp-message-row:not(.is-unread) :is(strong,b) { font-weight:400; }
+.task-prototype .tp-communication-results .tp-message-row.is-unread :is(strong,b) { font-weight:600; }
+.task-prototype .tp-unread-dot { position:absolute; top:15px; right:10px; width:6px; height:6px; border-radius:50%; background:#286dc0; }
+.task-prototype .tp-missed-call { display:block; color:#ac4836; font-size:11px; margin-top:5px; }
+.task-prototype .tp-communication-empty { padding:20px; color:var(--tp-muted); font-size:12px; }
+
+.task-prototype .tp-communication-views { display:flex; gap:0; padding:0 12px 12px; border-bottom:1px solid var(--tp-line); }
+.task-prototype .tp-communication-views button { flex:1; padding:8px 6px; border:1px solid var(--tp-line); background:var(--tp-surface); color:var(--tp-muted); font:500 12px/18px 'DM Sans',sans-serif; cursor:pointer; }
+.task-prototype .tp-communication-views button+button { border-left:0; }
+.task-prototype .tp-communication-views button[aria-pressed="true"] { background:var(--tp-hover); color:var(--tp-text); box-shadow:inset 0 -2px var(--tp-text); }
+.task-prototype .tp-communication-toolbar .tp-new-email { padding:8px 12px; border:1px solid var(--tp-text); background:var(--tp-text); color:var(--tp-surface); font:500 12px/18px 'DM Sans',sans-serif; cursor:pointer; }
+.task-prototype .tp-communication-toolbar .tp-new-email:hover { opacity:.85; }
+.task-prototype .tp-conversation-thread details { border-bottom:1px solid var(--tp-line); padding:16px 0; }
+.task-prototype .tp-conversation-thread summary { cursor:pointer; font-size:13px; }
+.task-prototype .tp-conversation-thread time { float:right; color:var(--tp-muted); font-size:11px; }
+.task-prototype .tp-conversation-thread summary span { display:block; margin:6px 0 0 16px; color:var(--tp-muted); font-size:12px; }
+.task-prototype .tp-conversation-thread p { font-size:14px; line-height:1.6; margin:16px; }
+.task-prototype [data-expand-thread] { border:0; background:none; color:var(--tp-text); text-decoration:underline; cursor:pointer; }
+
+.task-prototype [data-message-detail] > header > [data-expand-thread] { width:auto; flex:0 0 auto; white-space:nowrap; font-size:12px; padding:6px 0; }
