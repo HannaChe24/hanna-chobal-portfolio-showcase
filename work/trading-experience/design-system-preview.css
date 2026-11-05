@@ -1,0 +1,63 @@
+/* Reuse the Service Workspace image-preview presentation. */
+.request-image-preview {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 80px 24px 24px;
+  border: 0;
+  background: #111;
+  color: #fff;
+  overflow: auto;
+}
+.request-image-preview::backdrop { background: #000c; }
+.request-image-preview[open] { display: grid; place-items: center; }
+.request-image-preview > img { display: block; max-width: 100%; max-height: calc(100dvh - 104px); object-fit: contain; }
+.request-image-preview-toolbar {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 24px;
+  border-bottom: 1px solid #555;
+  font: 500 13px/1.3 "DM Sans", sans-serif;
+}
+.request-image-preview-toolbar button {
+  padding: 12px 18px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #777;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.request-image-preview-toolbar button:hover { background: #fff; color: #111; }
+body:has(.request-image-preview[open]) { overflow: hidden; }
+.workflow-page .request-view-images a { display: block; padding: 0; outline: none; }
+
+/* Preview close controls match the site's modal icon. */
+html body :is(.request-image-preview-toolbar button, .feedback-preview-toolbar button, .product-lightbox-close) {
+  display: flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; min-width: 34px; min-height: 34px;
+  padding: 7px; border: 0; border-radius: 6px;
+  background: transparent; color: #fff; cursor: pointer;
+}
+html body :is(.request-image-preview-toolbar button, .feedback-preview-toolbar button, .product-lightbox-close) svg { width: 20px; height: 20px; }
+html body :is(.request-image-preview-toolbar button, .feedback-preview-toolbar button, .product-lightbox-close):hover { background: #333; color: #fff; }
+html body :is(.request-image-preview-toolbar button, .feedback-preview-toolbar button, .product-lightbox-close):focus-visible { outline: 2px solid #49a85d; outline-offset: 2px; }
+
+
+/* Same side-by-side preview pattern as the ticket-system case. */
+.workflow-page .design-system-explanation { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; margin:32px 0; align-items:start; }
+.design-system-copy p { font-size:17px; line-height:1.6; }
+.design-system-copy p:first-child { margin-top:0; }
+.design-system-copy p + p { margin-top:24px; }
+.design-system-preview figure { margin:0; min-width:0; }
+.design-system-preview a { display:block; }
+.design-system-preview img { display:block; width:100%; height:auto; }
+.workflow-page .design-system-preview figcaption { margin-top:10px; font-size:13px; line-height:1.4; }
+.request-image-preview { background:#000; }
+@media(max-width:900px) { .workflow-page .design-system-explanation { grid-template-columns:minmax(0,1fr); } }

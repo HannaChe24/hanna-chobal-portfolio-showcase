@@ -1,0 +1,644 @@
+/* Original trading design-system typefaces, scoped to the prototype. */
+@font-face{font-family:"Trading Sofia Pro";src:url("../../protected-assets/trading-platform/fonts/SofiaProSemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Trading Avenir Next";src:url("../../protected-assets/trading-platform/fonts/AvenirNextCyr-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Trading Avenir Next";src:url("../../protected-assets/trading-platform/fonts/AvenirNextCyr-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Trading Avenir Next";src:url("../../protected-assets/trading-platform/fonts/AvenirNextCyr-Demi.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Trading Avenir Next";src:url("../../protected-assets/trading-platform/fonts/AvenirNextCyr-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+#mobile-trading-demo{display:flex;align-items:center;justify-content:center;overflow:visible}
+#mobile-trading-demo *{box-sizing:border-box}
+#mobile-trading-demo .m-device{width:314px;max-width:100%;padding:6px;border-radius:32px;background:linear-gradient(110deg,#fff,#cbd0d1 45%,#fff 75%,#bfc5c7);box-shadow:0 0 0 1px #fff,0 0 0 2px #737b7e}
+#mobile-trading-demo .m-phone{position:relative;width:100%;height:650px;container-type:inline-size;overflow:hidden;border:1px solid #9b9fa2;border-radius:26px;background:#fff;color:#111;font:400 11px/1.35 "Trading Avenir Next",Arial,sans-serif;letter-spacing:normal}
+#mobile-trading-demo :is(h3,h4,p){margin:0;letter-spacing:normal;text-transform:none;word-spacing:normal;max-width:none}
+#mobile-trading-demo h3{font:600 16px/1.3 "Trading Avenir Next",Arial,sans-serif}
+#mobile-trading-demo h4{font:600 12px/1.4 "Trading Avenir Next",Arial,sans-serif}
+#mobile-trading-demo button{font:inherit;text-transform:none;letter-spacing:normal;cursor:pointer;border:0;border-radius:0;background:transparent;color:inherit;padding:0;min-width:0;min-height:0;box-shadow:none}
+#mobile-trading-demo button:focus-visible{outline:2px solid #8026c2;outline-offset:-2px}
+#mobile-trading-demo svg{display:block;width:18px;height:18px;flex-shrink:0}
+#mobile-trading-demo [hidden]{display:none!important}
+#mobile-trading-demo small{display:block;font-size:9px;line-height:1.4;color:#8b939b}
+#mobile-trading-demo .m-up{color:#00c887}#mobile-trading-demo .m-down{color:#fb7272}
+#mobile-trading-demo .m-status{height:35px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;background:#c172fb;color:#fff;font-size:10px}
+#mobile-trading-demo .m-status svg{width:53px;height:14px}
+#mobile-trading-demo .m-scroll{height:545px;overflow:auto;overscroll-behavior:contain;scrollbar-width:none;background:#fafcff}
+#mobile-trading-demo .m-scroll::-webkit-scrollbar{display:none}
+#mobile-trading-demo .m-header{background:#c172fb;color:#fff}
+#mobile-trading-demo .m-header-row{height:50px;display:flex;align-items:center;justify-content:space-between;padding:0 18px}
+#mobile-trading-demo .m-header-row>b{font-size:14px}
+#mobile-trading-demo .m-header-row>div{display:flex;gap:12px}
+#mobile-trading-demo .m-header-row button{display:flex;align-items:center;justify-content:center}
+#mobile-trading-demo .m-header-row svg{width:15px;height:15px}
+#mobile-trading-demo .m-avatar{display:block;width:23px;height:23px;object-fit:cover;border:0;border-radius:50%}
+#mobile-trading-demo .m-tabs{display:flex;gap:20px;white-space:nowrap;overflow:auto;scrollbar-width:none;height:31px;padding:0 18px;align-items:center}
+#mobile-trading-demo .m-tabs button{font-size:10px;flex-shrink:0;color:#ffffffa8}
+#mobile-trading-demo .m-tabs button:first-child,#mobile-trading-demo .m-tabs button[aria-pressed=true]{color:#fff}
+#mobile-trading-demo .m-overview{padding:20px 18px;background:#fff;margin-bottom:8px}
+#mobile-trading-demo .m-greeting{display:flex;align-items:center;gap:8px;margin-bottom:16px}
+#mobile-trading-demo .m-greeting small{color:#1fb9ef}
+#mobile-trading-demo .m-balances{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;width:100%;text-align:left}
+#mobile-trading-demo .m-balances>span{position:relative}
+#mobile-trading-demo .m-balances b{font-size:13px;font-weight:600}
+#mobile-trading-demo .m-balances em{font-size:10px;font-style:normal;font-weight:400}
+#mobile-trading-demo .m-balances svg{position:absolute;right:0;top:3px;width:13px;height:13px;color:#8b939b}
+#mobile-trading-demo .m-card{background:#fff;margin:8px 0;padding:18px 0 0}
+#mobile-trading-demo .m-card-head{display:flex;align-items:center;justify-content:space-between;padding:0 18px 18px}
+#mobile-trading-demo .m-card-head button{font-size:9px;color:#8b939b}
+#mobile-trading-demo .m-table-head{display:flex;justify-content:space-between;padding:0 18px 5px 33px;color:#c9cdd1;font-size:9px}
+#mobile-trading-demo .m-stock{display:flex;align-items:start;gap:6px;width:100%;min-height:40px;padding:7px 18px;text-align:left}
+#mobile-trading-demo .m-stock:nth-of-type(odd){background:#f8faff}
+#mobile-trading-demo .m-brand{width:14px;font-size:13px;font-weight:bold;flex-shrink:0;text-align:center;color:#1687f8}
+#mobile-trading-demo .m-brand-1{color:#111}#mobile-trading-demo .m-brand-4{color:#ef4050}
+#mobile-trading-demo .m-stock-name{width:39%;min-width:0}
+#mobile-trading-demo .m-stock-name b{font-size:12px}
+#mobile-trading-demo .m-stock-name small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:8px}
+#mobile-trading-demo .m-price{font-size:11px;font-weight:600;white-space:nowrap}
+#mobile-trading-demo .m-profit{margin-left:auto;font-size:11px;white-space:nowrap;align-self:center}
+#mobile-trading-demo .m-stock:has(.m-spark) .m-stock-name{width:32%}
+#mobile-trading-demo .m-spark{width:29%;height:24px}
+#mobile-trading-demo .m-stock:has(.m-spark) .m-price{margin-left:auto}
+#mobile-trading-demo .m-news{display:flex;gap:8px;padding:8px 18px}
+#mobile-trading-demo .m-news img{width:85px;height:48px;object-fit:cover}
+#mobile-trading-demo .m-news b{font-size:10px}
+#mobile-trading-demo .m-event{padding:0 18px 24px;font-size:11px}
+#mobile-trading-demo .m-nav{position:absolute;bottom:0;left:0;right:0;height:70px;background:#fff;border-top:1px solid #f4f5fa;display:flex;align-items:start;padding-top:10px;z-index:5}
+#mobile-trading-demo .m-nav>button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;width:20%;height:36px;color:#8b939b;font-size:8px}
+#mobile-trading-demo .m-nav>button[aria-current=true]{color:#111}
+#mobile-trading-demo .m-nav>button svg{width:18px;height:18px}
+#mobile-trading-demo .m-nav .m-plus{position:relative;top:-28px;margin:0 6px;width:48px;height:48px;flex-shrink:0;background:#c172fb;color:#fff;border-radius:50%;box-shadow:0 4px 8px #0002}
+#mobile-trading-demo .m-nav .m-plus svg{width:24px;height:24px}
+#mobile-trading-demo .m-gesture{position:absolute;bottom:9px;left:32%;width:36%;height:4px;background:#c9cdd1;border-radius:8px}
+#mobile-trading-demo .m-scrim{position:absolute;inset:0 0 70px;background:#29315347;z-index:3}
+#mobile-trading-demo .m-action-menu{position:absolute;bottom:104px;left:50%;transform:translateX(-50%);width:136px;display:grid;gap:8px;z-index:4}
+#mobile-trading-demo .m-action-menu button{height:36px;border-radius:99px;background:#c172fb;color:#fff;font-size:13px;font-weight:600}
+#mobile-trading-demo .m-action-menu button+button{color:#c172fb;background:#fff}
+#mobile-trading-demo .m-account{position:absolute;inset:132px 12px 132px;background:#fff;border-radius:4px;z-index:6;padding-top:40px;display:flex;flex-direction:column}
+#mobile-trading-demo .m-account>h3{padding:0 24px 20px;font-size:16px}
+#mobile-trading-demo .m-account-close{position:absolute;right:8px;top:8px;color:#c9cdd1}
+#mobile-trading-demo .m-account-rows{overflow:auto}
+#mobile-trading-demo .m-account-row{display:grid;grid-template-columns:52px 1fr;gap:8px;padding:10px 16px;font-size:11px}
+#mobile-trading-demo .m-account-row:nth-child(odd){background:#f8faff}
+#mobile-trading-demo .m-account-row p{font:400 10px/1.4 "Trading Avenir Next",Arial,sans-serif;color:#8b939b;margin-top:4px}
+#mobile-trading-demo .m-toast{position:absolute;bottom:160px;left:16px;right:16px;z-index:8;padding:12px;background:#fff;border:1px solid #c172fb;font-size:11px}
+#mobile-trading-demo .m-notification{padding:12px 16px;background:#fff}
+
+#mobile-trading-demo .m-notification.m-unread{background:#f4f7ff;border-left:3px solid #c172fb;padding-left:13px}
+
+#mobile-trading-demo .m-notification time{font-size:9px;color:#8b939b}
+#mobile-trading-demo .m-notification h4{margin:7px 0}
+#mobile-trading-demo .m-notification p{font:400 10px/1.45 "Trading Avenir Next",Arial,sans-serif;margin-top:4px}
+@media(max-width:360px){#mobile-trading-demo .m-device{width:290px}#mobile-trading-demo .m-phone{height:610px}#mobile-trading-demo .m-scroll{height:505px}}
+
+/* Header and bottom controls are outside the only scrolling area. */
+#mobile-trading-demo .m-phone{display:grid;grid-template-rows:35px auto minmax(0,1fr) 70px}
+#mobile-trading-demo .m-status{grid-row:1}
+#mobile-trading-demo .m-screen-header{grid-row:2;position:relative;z-index:2}
+#mobile-trading-demo .m-scroll{grid-row:3;height:auto;min-height:0;position:relative}
+#mobile-trading-demo .m-nav{grid-row:4;position:relative;inset:auto;height:70px}
+@media(max-width:360px){#mobile-trading-demo .m-scroll{height:auto}}
+
+/* Notification artwork, unread markers and row hierarchy match Notifications_m.svg. */
+#mobile-trading-demo .m-notification{position:relative;padding:8px 16px 9px;border:0;background:#fff}
+#mobile-trading-demo .m-notification.m-unread{border:0;padding-left:16px}
+#mobile-trading-demo .m-unread-dot{position:absolute;left:7px;top:12px;width:6px;height:6px;border-radius:50%;background:#c172fb}
+#mobile-trading-demo .m-notification-heading{display:flex;align-items:center;gap:4px;min-height:20px}
+#mobile-trading-demo .m-notification-heading>b{font-size:11px;white-space:nowrap}
+#mobile-trading-demo .m-notification-heading time{margin-left:auto;white-space:nowrap;font-size:9px}
+#mobile-trading-demo .m-notification svg.m-notification-icon{width:22px;height:22px;flex:0 0 22px;overflow:hidden}
+#mobile-trading-demo .m-notification-instrument{display:flex;align-items:center;gap:7px;margin-left:3px}
+#mobile-trading-demo .m-notification-instrument>div{display:block}
+#mobile-trading-demo .m-notification-instrument h4{margin:0;font-size:12px;line-height:1.35}
+#mobile-trading-demo .m-notification-instrument .m-up{font-size:10px}
+#mobile-trading-demo .m-notification p{margin-top:3px;font-size:10px;line-height:1.4}
+
+/* Native cursor inside the interactive phone. */
+html body.has-cursor-trail #mobile-trading-demo,
+html body.has-cursor-trail #mobile-trading-demo *{cursor:auto!important}
+html body.has-cursor-trail #mobile-trading-demo button,
+html body.has-cursor-trail #mobile-trading-demo button *{cursor:pointer!important}
+
+#mobile-trading-demo .m-news{display:block;padding:9px 18px}
+#mobile-trading-demo .m-news-link{display:grid;grid-template-columns:86px minmax(0,1fr);gap:9px;text-decoration:none;color:#111}
+#mobile-trading-demo .m-news-link img{width:86px;height:64px;object-fit:cover;border-radius:2px;background:#f4f7ff}
+#mobile-trading-demo .m-news-link h4{font:600 10px/1.35 "Trading Avenir Next",Arial,sans-serif;margin:0 0 4px}
+#mobile-trading-demo .m-news-link small{font-size:8px;line-height:1.4}
+#mobile-trading-demo .m-news-ticker{display:block;font:600 9px/1.4 "Trading Avenir Next",Arial,sans-serif;color:#656c77;margin-bottom:2px}
+#mobile-trading-demo .m-news-link:hover h4{text-decoration:underline}
+#mobile-trading-demo .m-news-link:focus-visible{outline:2px solid #c172fb;outline-offset:3px}
+html body.has-cursor-trail #mobile-trading-demo a,html body.has-cursor-trail #mobile-trading-demo a *{cursor:pointer!important}
+/* Prevent intrinsic header/table widths from expanding the phone's grid tracks. */
+#mobile-trading-demo .m-phone{grid-template-columns:minmax(0,1fr)}
+#mobile-trading-demo .m-phone>*,
+#mobile-trading-demo .m-header,
+#mobile-trading-demo .m-header-row,
+#mobile-trading-demo .m-tabs,
+#mobile-trading-demo .m-card{min-width:0;max-width:100%}
+#mobile-trading-demo .m-scroll{width:100%;overflow-x:hidden}
+#mobile-trading-demo .m-stock{display:grid;grid-template-columns:14px minmax(0,1fr) 48px 79px;gap:5px;padding-inline:14px}
+#mobile-trading-demo .m-stock-name{width:auto;min-width:0}
+#mobile-trading-demo .m-price{min-width:0;font-size:10px}
+#mobile-trading-demo .m-profit{margin-left:0;font-size:10px;text-align:right;min-width:0}
+#mobile-trading-demo .m-stock:has(.m-spark){grid-template-columns:14px minmax(0,1fr) 70px 48px}
+#mobile-trading-demo .m-stock:has(.m-spark) .m-stock-name{width:auto}
+#mobile-trading-demo .m-stock:has(.m-spark) .m-price{margin-left:0;text-align:right}
+#mobile-trading-demo .m-spark{width:100%;max-width:70px}
+
+#mobile-trading-demo .m-brand{display:flex;align-items:center;justify-content:center;width:14px;height:16px;overflow:hidden}
+#mobile-trading-demo .m-brand svg.m-brand-logo{display:block;width:14px;height:14px;overflow:hidden;flex-shrink:0}
+
+#mobile-trading-demo :is(h3,h4),
+#mobile-trading-demo .m-header-row>b,
+#mobile-trading-demo .m-greeting h3{font-family:"Trading Sofia Pro","Trading Avenir Next",sans-serif;font-weight:600}
+#mobile-trading-demo .m-phone{font-weight:500}
+#mobile-trading-demo .m-action-menu button{font-family:"Trading Avenir Next",sans-serif;font-weight:600}
+
+#mobile-trading-demo .m-event-card{padding:16px 16px 18px;background:#f8faff}
+#mobile-trading-demo .m-event-card:nth-of-type(even){background:#fff}
+#mobile-trading-demo .m-event-heading{display:flex;align-items:center;gap:12px;font-size:11px;margin-bottom:10px}
+#mobile-trading-demo .m-event-symbol{display:flex;align-items:center;gap:5px;font-size:12px}
+#mobile-trading-demo .m-event-symbol svg{width:15px;height:15px;overflow:hidden}
+#mobile-trading-demo .m-event-actions{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin-bottom:10px}
+#mobile-trading-demo .m-event-actions button{border:1px solid #d7d8e4;border-radius:99px;height:32px;font-weight:600;font-size:13px;background:transparent;color:#111}
+#mobile-trading-demo .m-event-actions .m-event-buy{background:#00c887;color:#fff;border-color:#00c887}
+#mobile-trading-demo .m-event-actions .m-event-sell{background:#ff6b6b;color:#fff;border-color:#ff6b6b}
+#mobile-trading-demo .m-event-details{margin:0;font-size:11px;line-height:1.5}
+#mobile-trading-demo .m-event-details>div{display:grid;grid-template-columns:49px minmax(0,1fr);gap:4px;margin-top:4px}
+#mobile-trading-demo .m-event-details dt{color:#8b939b}
+#mobile-trading-demo .m-event-details dd{margin:0;display:flex;align-items:center;gap:5px;white-space:nowrap}
+#mobile-trading-demo .m-impact-positive{color:#00c887}
+#mobile-trading-demo .m-impact-neutral{color:#8b939b}
+#mobile-trading-demo .m-impact-dots{display:flex;gap:3px}
+#mobile-trading-demo .m-impact-dots i{width:6px;height:6px;border:1px solid #c9cdd1;border-radius:50%;display:block}
+#mobile-trading-demo .m-impact-dots i.is-filled{border-color:currentColor;background:currentColor}
+#mobile-trading-demo .m-orders{background:#f4f7ff;padding-top:8px}
+#mobile-trading-demo .m-order-card{background:#fff;margin-bottom:9px;padding:14px 18px 8px;border-radius:8px 8px 0 0}
+#mobile-trading-demo .m-order-heading{display:grid;grid-template-columns:14px minmax(0,1fr) 39px 62px 12px;align-items:center;width:100%;gap:4px;text-align:left;padding-bottom:10px;border-bottom:1px solid #e8ebf4;font-size:10px}
+#mobile-trading-demo .m-order-heading svg{width:14px;height:14px;overflow:hidden}
+#mobile-trading-demo .m-order-heading small{font-size:8px}
+#mobile-trading-demo .m-order-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 8px;padding:12px 0}
+#mobile-trading-demo .m-order-grid small{font-size:9px}
+#mobile-trading-demo .m-order-grid b{font-weight:600;font-size:11px}
+#mobile-trading-demo .m-order-grid button{border:1px solid #d7d8e4;border-radius:99px;padding:3px 8px;font-size:10px}
+#mobile-trading-demo .m-order-controls{display:flex;justify-content:flex-end;gap:10px;color:#8b939b}
+#mobile-trading-demo .m-order-controls button{width:24px;height:24px;font-size:20px;display:grid;place-items:center}
+#mobile-trading-demo .m-msft{display:grid;grid-template-columns:1fr 1fr;gap:1px;width:13px;height:13px}
+#mobile-trading-demo .m-msft i{background:#f25022}#mobile-trading-demo .m-msft i:nth-child(2){background:#7fba00}#mobile-trading-demo .m-msft i:nth-child(3){background:#00a4ef}#mobile-trading-demo .m-msft i:nth-child(4){background:#ffb900}
+#mobile-trading-demo .m-order-options-header{background:#fff;color:#111}
+#mobile-trading-demo .m-order-options-header .m-header-row{height:62px}
+#mobile-trading-demo .m-order-options-header .m-header-row>div{display:block;text-align:center}
+#mobile-trading-demo .m-order-options-header b{font-size:16px}
+#mobile-trading-demo .m-order-form{padding:16px 12px 20px;background:#f4f7ff}
+#mobile-trading-demo .m-form-card{background:#fff;padding:18px;margin-bottom:16px;border-radius:4px}
+#mobile-trading-demo .m-form-card>label:first-child{font-size:15px;font-weight:600}
+#mobile-trading-demo .m-form-card>label small{display:inline;font-size:8px;font-weight:400}
+#mobile-trading-demo .m-form-card input{font-family:"Trading Avenir Next",sans-serif;color:#111;border:0;border-bottom:1px solid #8b939b;background:transparent;min-width:0;border-radius:0}
+#mobile-trading-demo #m-order-units{display:block;font-size:28px;font-weight:600;width:80%;margin:6px 0 10px}
+#mobile-trading-demo .m-form-card p{font:400 13px/1.4 "Trading Avenir Next",sans-serif;margin-top:4px}
+#mobile-trading-demo .m-form-card .m-form-help{font-size:10px;color:#555;margin:10px 0}
+#mobile-trading-demo .m-muted{color:#8b939b}
+#mobile-trading-demo .m-option{display:flex;align-items:center;gap:6px;margin-top:12px;font-size:13px}
+#mobile-trading-demo .m-option input[type=radio],#mobile-trading-demo .m-option input[type=checkbox]{appearance:auto;width:17px;height:17px;accent-color:#111;margin:0;flex-shrink:0}
+#mobile-trading-demo .m-option input[type=number]{width:80px;font-size:13px}
+#mobile-trading-demo .m-protection{display:flex;gap:6px;flex-wrap:wrap}
+#mobile-trading-demo .m-protection b{font-size:15px}
+#mobile-trading-demo .m-protection>span{margin-left:2px;font-size:8px;background:#c172fb;color:#fff;padding:2px 4px;border-radius:3px}
+#mobile-trading-demo .m-rate-control{display:flex;align-items:center;gap:7px;margin:16px 0;font-size:13px}
+#mobile-trading-demo .m-rate-control button{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border-radius:50%;background:#f4f7ff;color:#8b939b;font-size:20px;line-height:1}
+#mobile-trading-demo .m-rate-control input{width:72px;height:32px;padding:3px 2px;font-size:15px;text-align:center}
+#mobile-trading-demo .m-form-card input:disabled,#mobile-trading-demo .m-rate-control button:disabled{opacity:.4;cursor:default!important}
+#mobile-trading-demo .m-delete-order{display:block;width:100%;padding:12px 18px;text-align:left;background:#fff;border-radius:4px;color:#ff6b6b;font-size:14px}
+#mobile-trading-demo .m-order-footer{position:absolute;bottom:0;left:0;right:0;height:70px;background:#fff;border-top:1px solid #d7d8e4;display:flex;align-items:center;justify-content:center;gap:8px;z-index:5;padding-bottom:10px}
+#mobile-trading-demo .m-order-footer button{padding:9px 20px;background:#f4f7ff;border-radius:99px;font-weight:600;font-size:13px}
+#mobile-trading-demo .m-order-footer button+button{background:#c172fb;color:#fff}
+#mobile-trading-demo .m-account.m-delete-confirm{inset:220px 16px auto;padding:22px}
+#mobile-trading-demo .m-delete-confirm>h3{padding:0;margin-bottom:12px}
+#mobile-trading-demo .m-delete-confirm p{font-size:12px;margin-bottom:16px}
+#mobile-trading-demo .m-delete-confirm>div{display:flex;justify-content:flex-end;gap:12px}
+#mobile-trading-demo .m-delete-confirm button{padding:8px 12px;border:1px solid #d7d8e4;border-radius:99px}
+#mobile-trading-demo .m-delete-confirm button+button{background:#ff6b6b;border-color:#ff6b6b;color:#fff}
+#mobile-trading-demo .m-order-empty{padding:30px;text-align:center;font-size:13px}
+
+#mobile-trading-demo .m-nav svg.m-original-nav-icon{width:18px;height:18px;overflow:hidden}
+/* Black handset frame for the portfolio demonstration. */
+#mobile-trading-demo .m-device{position:relative;padding:5px;border-radius:25px;background:linear-gradient(110deg,#111214,#303236 45%,#151618 75%,#08090a);box-shadow:0 0 0 1px #090a0b,0 0 0 2px #4b4d50}
+#mobile-trading-demo .m-device::before,#mobile-trading-demo .m-device::after{content:"";position:absolute;right:-3px;width:3px;background:#555a61;border-radius:0 2px 2px 0;pointer-events:none}
+#mobile-trading-demo .m-device::before{top:108px;height:30px}
+#mobile-trading-demo .m-device::after{top:159px;height:53px}
+#mobile-trading-demo .m-phone{border-radius:20px}
+#mobile-trading-demo .m-status{position:relative;padding-inline:19px}
+#mobile-trading-demo .m-status::after{content:"";position:absolute;top:10px;left:50%;transform:translateX(-50%);width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#202a37 0 18%,#080a0d 30% 65%,#25282e 75%);box-shadow:0 0 0 1px #0005;pointer-events:none}
+#mobile-trading-demo .m-phone{border-color:#08090a}
+/* Contextual feedback stays inside the phone, above the floating trade control. */
+#mobile-trading-demo .m-toast{display:flex;align-items:center;gap:10px;bottom:110px;left:12px;right:12px;z-index:8;padding:12px 12px 12px 14px;border:0;border-radius:8px;background:#292630;color:#fff;box-shadow:0 3px 12px #0002;font:500 11px/1.5 "Trading Avenir Next",sans-serif;animation:m-feedback-in .16s ease-out}
+#mobile-trading-demo .m-toast-text{flex:1;min-width:0}
+#mobile-trading-demo .m-toast[data-tone="success"]{background:#dcf8ec;color:#08764e;border:1px solid #b5e8d1}
+#mobile-trading-demo .m-toast[data-tone="error"]{background:#fff0f1;color:#cf3547;border:1px solid #ffccd0}
+#mobile-trading-demo .m-toast button{display:grid;place-items:center;flex:0 0 28px;width:28px;height:28px;border-radius:50%;color:#fff}
+#mobile-trading-demo .m-toast button:hover{background:#ffffff18}
+#mobile-trading-demo .m-toast button:focus-visible{outline-color:#fff}
+#mobile-trading-demo .m-toast[data-tone="success"] button,#mobile-trading-demo .m-toast[data-tone="error"] button{color:inherit}
+#mobile-trading-demo .m-toast[data-tone="success"] button:hover,#mobile-trading-demo .m-toast[data-tone="error"] button:hover{background:#00000008}
+#mobile-trading-demo .m-toast[data-tone="success"] button:focus-visible,#mobile-trading-demo .m-toast[data-tone="error"] button:focus-visible{outline-color:currentColor}
+#mobile-trading-demo .m-toast svg{width:16px;height:16px}
+@keyframes m-feedback-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){#mobile-trading-demo .m-toast{animation:none}}
+/* The notification inbox uses the app's own surfaces, typography and accent. */
+#mobile-trading-demo .m-notification-tools{display:flex;align-items:center;justify-content:space-between;padding:9px 16px;border-bottom:1px solid #e8ebf4;background:#fff;font-size:9px;color:#8b939b}
+#mobile-trading-demo .m-notification-tools button,#mobile-trading-demo .m-mark-read{color:#873bc1;font:600 9px/1.4 "Trading Avenir Next",sans-serif;padding:5px 0}
+#mobile-trading-demo .m-notification-heading{align-items:center;gap:5px}
+#mobile-trading-demo .m-notification-heading>b{font-family:"Trading Sofia Pro",sans-serif;font-weight:600;font-size:11px;white-space:normal;flex:1;min-width:0}
+#mobile-trading-demo .m-notification-heading time{font:400 8px/1.4 "Trading Avenir Next",sans-serif;flex-shrink:0;color:#8b939b}
+#mobile-trading-demo .m-notification{padding:10px 16px 10px 18px;border-bottom:1px solid #eef0f7}
+#mobile-trading-demo .m-notification.m-unread{padding-left:18px}
+#mobile-trading-demo .m-unread-dot{left:6px;top:17px;width:5px;height:5px}
+#mobile-trading-demo .m-notification-instrument{margin:3px 0 0 0}
+#mobile-trading-demo .m-notification p{font-weight:400;line-height:1.5;margin-top:5px}
+#mobile-trading-demo .m-notification .m-mark-read{display:block;margin:5px 0 0 auto}
+#mobile-trading-demo .m-notification-empty{padding:30px 18px;text-align:center;color:#8b939b;font:500 12px/1.5 "Trading Avenir Next",sans-serif}
+
+#mobile-trading-demo .m-tools-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:14px 18px 19px;background:#c172fb}
+#mobile-trading-demo .m-tool-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:85px;padding:9px 5px;background:#fafcff;border-radius:4px;text-align:center;color:#000;font:500 10px/1.3 "Trading Avenir Next",sans-serif}
+#mobile-trading-demo svg.m-tool-icon{display:block;width:32px;height:32px;overflow:hidden}
+#mobile-trading-demo .m-signal-icon{filter:none}
+#mobile-trading-demo .m-tools-avatar{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#ffe000;color:#fff2aa;font-size:15px}
+
+#mobile-trading-demo .m-toast{bottom:var(--feedback-bottom,110px)}
+#mobile-trading-demo .m-topup-form{padding:0 18px 20px;background:#fff;min-height:100%}
+#mobile-trading-demo .m-topup-form>p{font:500 13px/1.45 "Trading Avenir Next",sans-serif;color:#555;margin:0 0 16px}
+#mobile-trading-demo .m-topup-form>p:nth-of-type(n+2){margin-top:16px}
+#mobile-trading-demo .m-payment-methods{display:flex;gap:8px;overflow-x:auto;padding-bottom:3px}
+#mobile-trading-demo .m-payment-methods button{flex:0 0 73px;height:45px;border:1px solid #d7d8e4;border-radius:3px;overflow:hidden}
+#mobile-trading-demo .m-payment-methods button[aria-pressed=true]{border:2px solid #c172fb}
+#mobile-trading-demo .m-payment-methods svg{width:100%;height:100%;overflow:hidden}
+#mobile-trading-demo .m-deposit-presets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+#mobile-trading-demo .m-deposit-presets button{background:#f4f7ff;border-radius:99px;padding:6px;font-size:13px}
+#mobile-trading-demo .m-deposit-presets button[aria-pressed=true]{background:#ffda00}
+#mobile-trading-demo .m-deposit-value{display:grid;grid-template-columns:minmax(0,1fr) 74px;gap:16px;align-items:end;margin:16px 0 24px}
+#mobile-trading-demo .m-topup-form input,#mobile-trading-demo .m-topup-form select{width:100%;min-width:0;border:0;border-bottom:1px solid #111;border-radius:0;background:transparent;color:#111;font-family:"Trading Avenir Next",sans-serif;outline-offset:3px}
+#mobile-trading-demo .m-deposit-value input{font-size:28px;font-weight:600}
+#mobile-trading-demo .m-deposit-value>label+label{padding:5px 8px 0;background:#f4f7ff;color:#8b939b;font-size:10px}
+#mobile-trading-demo .m-deposit-value select{font-size:13px;padding:5px 0}
+#mobile-trading-demo .m-card-fields label{display:block;color:#8b939b;font-size:13px;margin-top:20px}
+#mobile-trading-demo .m-card-fields input{display:block;font-size:13px;padding:6px 0;height:26px}
+#mobile-trading-demo .m-card-fields>div{display:grid;grid-template-columns:minmax(0,1fr) 68px;gap:16px}
+#mobile-trading-demo .m-payment-caption{font-size:9px;margin:16px 0 8px}
+#mobile-trading-demo .m-payment-logos svg{width:100%;height:auto;aspect-ratio:327/110;overflow:hidden}
+#mobile-trading-demo .m-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+
+/* Top Up matches its supplied sheet, independent of portfolio field states. */
+#mobile-trading-demo{--field-accent:#c172fb;--field-surface:#fff;--field-text:#111;--field-focus-fill:transparent}
+#mobile-trading-demo :is(input,select,textarea):hover{background-color:transparent;box-shadow:none;outline:none}
+#mobile-trading-demo :is(input,select,textarea):focus{background-color:transparent;outline:none;border-bottom-color:#c172fb;box-shadow:none}
+#mobile-trading-demo :is(input,select,textarea):focus-visible{outline:1px solid #c172fb;outline-offset:2px}
+#mobile-trading-demo select option{background:#fff;color:#111}
+#mobile-trading-demo .m-topup-form label{letter-spacing:normal;text-transform:none;font-weight:500}
+#mobile-trading-demo .m-payment-carousel{display:grid;grid-template-columns:10px minmax(0,1fr) 10px;gap:5px;align-items:center;margin-inline:-14px}
+#mobile-trading-demo .m-payment-arrow{color:#8b939b;font:400 24px/1 Arial,sans-serif;pointer-events:none;user-select:none}
+#mobile-trading-demo .m-payment-methods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;overflow:visible;padding:0}
+#mobile-trading-demo .m-payment-methods button{width:100%;height:45px;border:1px solid #d7d8e4;padding:2px;background:#fff;box-sizing:border-box;box-shadow:none}
+#mobile-trading-demo .m-payment-methods button[aria-pressed=true]{border:1px solid #c172fb;box-shadow:inset 0 0 0 1px #c172fb}
+#mobile-trading-demo .m-payment-methods button:hover{background:#fff}
+#mobile-trading-demo .m-payment-methods button:focus:not(:focus-visible){outline:none}
+#mobile-trading-demo .m-payment-methods button:focus-visible{outline:2px solid #c172fb;outline-offset:3px}
+#mobile-trading-demo .m-payment-methods svg{border:0;display:block;pointer-events:none}
+#mobile-trading-demo .m-expiry-field{position:relative;background:#f4f7ff;padding:8px 8px 0}
+#mobile-trading-demo .m-expiry-chevron{position:absolute;right:8px;top:8px;pointer-events:none}
+#mobile-trading-demo .m-cvv-field>span{font-size:12px;margin-left:8px}
+#mobile-trading-demo .m-topup-screen .m-screen-header{background:#c172fb;padding-top:12px}
+#mobile-trading-demo .m-topup-screen .m-header{border-radius:10px 10px 0 0;position:relative}
+#mobile-trading-demo .m-topup-screen .m-screen-header:before{content:'';position:absolute;left:12px;right:12px;top:4px;height:12px;border-radius:8px 8px 0 0;background:#ffffff80}
+#mobile-trading-demo .m-topup-screen .m-header-row{height:46px}
+#mobile-trading-demo .m-topup-screen .m-order-footer button+button{min-width:150px}
+
+#mobile-trading-demo .m-topup-form :is(input,select,textarea){font-family:"Trading Avenir Next",sans-serif!important;font-style:normal;letter-spacing:normal!important;text-transform:none!important;font-weight:500;line-height:1.4}
+#mobile-trading-demo .m-topup-form .m-deposit-value input{font-size:28px;font-weight:600}
+#mobile-trading-demo .m-topup-form .m-card-fields input{font-size:13px}
+#mobile-trading-demo .m-topup-form :is(label,.m-currency>span){font-family:"Trading Avenir Next",sans-serif;letter-spacing:normal!important;text-transform:none!important}
+#mobile-trading-demo .m-currency{position:relative;background:#f0f5ff;padding:6px 8px 0;border-bottom:1px solid #111;color:#8b939b;font-size:10px}
+#mobile-trading-demo .m-currency-trigger{display:flex;align-items:center;justify-content:space-between;width:100%;padding:5px 0;color:#111;font:500 13px/1.4 "Trading Avenir Next",sans-serif}
+#mobile-trading-demo .m-currency-trigger svg{width:12px;height:12px}
+#mobile-trading-demo .m-currency-trigger:focus-visible{outline:2px solid #6c9fe8;outline-offset:2px;border-radius:3px}
+#mobile-trading-demo .m-currency-options{position:absolute;top:calc(100% + 5px);left:-8px;right:0;z-index:7;background:#fff;border:1px solid #cddcf1;border-radius:7px;box-shadow:0 5px 16px #1c396b24;overflow:hidden;padding:4px}
+#mobile-trading-demo .m-currency-options button{display:flex;align-items:center;justify-content:space-between;width:100%;padding:8px 7px;border-radius:4px;text-align:left;color:#243d61;font:500 12px/1.3 "Trading Avenir Next",sans-serif}
+#mobile-trading-demo .m-currency-options button[aria-selected=true]{background:#e6f0ff;color:#245bb0}
+#mobile-trading-demo .m-currency-options button:hover,#mobile-trading-demo .m-currency-options button:focus-visible{background:#d7e8ff;outline:none}
+/* A single focus perimeter belongs to the complete field, including its label. */
+#mobile-trading-demo .m-card-fields label{padding:8px 8px 0;background:#f4f7ff;position:relative}
+#mobile-trading-demo .m-topup-form label:has(>input):focus-within{outline:2px solid #8050bf;outline-offset:0}
+#mobile-trading-demo .m-topup-form label>input:focus,
+#mobile-trading-demo .m-topup-form label>input:focus-visible{outline:none!important;box-shadow:none;border-bottom-color:#111}
+#mobile-trading-demo .m-currency:has(.m-currency-trigger:focus-visible){outline:2px solid #3267b3;outline-offset:0}
+#mobile-trading-demo .m-currency-trigger:focus-visible{outline:none}
+@media(forced-colors:active){#mobile-trading-demo .m-topup-form label:has(>input):focus-within,#mobile-trading-demo .m-currency:has(.m-currency-trigger:focus-visible){outline-color:Highlight}}
+
+#mobile-trading-demo .m-amount-field{position:relative;display:flex;align-items:stretch;border-bottom:1px solid #111;min-width:0}
+#mobile-trading-demo .m-amount-field>label{display:block;flex:1;min-width:0}
+#mobile-trading-demo .m-amount-field input{appearance:textfield;-moz-appearance:textfield;border-bottom:0;padding-right:4px}
+#mobile-trading-demo .m-amount-field input::-webkit-inner-spin-button,#mobile-trading-demo .m-amount-field input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+#mobile-trading-demo .m-amount-field:focus-within{outline:2px solid #8050bf;outline-offset:0}
+#mobile-trading-demo .m-topup-form .m-amount-field label:focus-within{outline:none}
+#mobile-trading-demo .m-amount-steppers{display:grid;grid-template-rows:1fr 1fr;gap:2px;width:26px;flex-shrink:0;margin:3px}
+#mobile-trading-demo .m-amount-steppers button{display:grid;place-items:center;background:#f0f5ff;color:#8050bf;border-radius:4px;min-height:19px;width:26px}
+#mobile-trading-demo .m-amount-steppers button svg{width:13px;height:13px}
+#mobile-trading-demo .m-amount-steppers button:hover{background:#ead8ff}
+#mobile-trading-demo .m-amount-steppers button:active{background:#c172fb;color:#fff}
+#mobile-trading-demo .m-amount-steppers button:focus-visible{outline:2px solid #8050bf;outline-offset:-2px}
+/* Currency list is a flush rectangular extension of the field. */
+#mobile-trading-demo .m-currency-options{top:100%;left:0;right:0;padding:0;border-radius:0;border:1px solid #d7d8e4;border-top:0;box-shadow:0 4px 8px #00000014}
+#mobile-trading-demo .m-currency-options button{border-radius:0;margin:0;width:100%;padding:9px 8px;color:#111}
+#mobile-trading-demo .m-currency-options button[aria-selected=true]{background:#e1eaff;color:#111}
+#mobile-trading-demo .m-currency-options button:hover,#mobile-trading-demo .m-currency-options button:focus-visible{background:#d7e4ff;outline:none;border-radius:0}
+#mobile-trading-demo .m-currency-trigger svg{width:13px;height:13px;stroke:#8b939b;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter}
+#mobile-trading-demo .m-currency-trigger:focus-visible{border-radius:0}
+
+#mobile-trading-demo input[name="demoExpiry"]{cursor:pointer!important}
+#mobile-trading-demo .m-expiry-backdrop{position:absolute;inset:0;background:#0002;z-index:9}
+#mobile-trading-demo .m-expiry-picker{position:absolute;bottom:0;left:0;right:0;height:302px;background:#fff;z-index:10;border-top:1px solid #d7d8e4}
+#mobile-trading-demo .m-expiry-toolbar{height:44px;display:flex;align-items:center;justify-content:flex-end;padding:0 18px}
+#mobile-trading-demo .m-expiry-done{color:#c172fb;font:600 17px/1.3 "Trading Avenir Next",sans-serif;padding:8px 0}
+#mobile-trading-demo .m-expiry-wheels{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:0 35px;height:224px;gap:10px}
+#mobile-trading-demo .m-expiry-selection{position:absolute;top:96px;left:0;right:0;height:32px;border-block:1px solid #d7d8e4;pointer-events:none}
+#mobile-trading-demo .m-expiry-wheel{height:224px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;scroll-snap-type:y mandatory;padding-block:96px;mask-image:linear-gradient(transparent,#000 28%,#000 72%,transparent);outline:none}
+#mobile-trading-demo .m-expiry-wheel::-webkit-scrollbar{display:none}
+#mobile-trading-demo .m-expiry-wheel>[role="option"]{height:32px;min-height:32px;display:flex;justify-content:center;align-items:center;scroll-snap-align:center;font:400 21px/32px "Trading Avenir Next",sans-serif;color:#8b8c95;opacity:calc(1 - var(--wheel-distance,0)*.17);cursor:pointer}
+#mobile-trading-demo .m-expiry-wheel>[aria-selected="true"]{color:#000;opacity:1}
+#mobile-trading-demo .m-expiry-wheel:focus-visible{box-shadow:inset 0 0 0 2px #8050bf}
+#mobile-trading-demo .m-expiry-gesture{position:absolute;bottom:8px;left:32%;width:36%;height:4px;border-radius:4px;background:#c9cdd1}
+
+/* Instrument rows follow the original icon + label alignment, not edge distribution. */
+#mobile-trading-demo .m-notification>.m-notification-heading{display:flex;justify-content:flex-start;align-items:center;gap:5px}
+#mobile-trading-demo .m-notification>.m-notification-instrument{display:flex;justify-content:flex-start;align-items:center;gap:5px;margin:2px 0 0 2px}
+#mobile-trading-demo .m-notification-instrument>div{flex:0 1 auto;min-width:0;text-align:left}
+#mobile-trading-demo .m-notification-instrument h4{margin:0;line-height:1.3;text-align:left}
+#mobile-trading-demo .m-notification-instrument .m-notification-icon{flex:0 0 22px}
+/* Demo keyboard occupies screen space instead of covering the active field. */
+#mobile-trading-demo .m-phone.m-keyboard-open{grid-template-rows:35px auto minmax(0,1fr) var(--m-keyboard-height)}
+#mobile-trading-demo .m-keyboard-open>.m-nav,#mobile-trading-demo .m-keyboard-open>.m-order-footer{visibility:hidden;pointer-events:none}
+#mobile-trading-demo .m-keyboard{position:absolute;bottom:0;left:0;right:0;height:var(--m-keyboard-height);z-index:10;background:#d9dce2;border-top:1px solid #c9cdd1;padding:0 5px 20px;font-family:"Trading Avenir Next",sans-serif;user-select:none}
+#mobile-trading-demo .m-keyboard-toolbar{height:34px;display:flex;align-items:center;justify-content:space-between;padding:0 9px;background:#f7f8fb;margin:0 -5px 6px;font-size:10px;color:#8b939b}
+#mobile-trading-demo .m-keyboard-toolbar button{color:#a34de0;font-size:13px;font-weight:600;padding:5px}
+#mobile-trading-demo .m-keyboard button{touch-action:manipulation}
+#mobile-trading-demo .m-numeric-keys{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+#mobile-trading-demo .m-numeric-keys button{height:38px;background:#fff;border-radius:5px;box-shadow:0 1px 0 #9fa4ae;font-size:21px}
+#mobile-trading-demo .m-numeric-keys .m-key-function{background:transparent;box-shadow:none;font-size:15px}
+#mobile-trading-demo .m-key-row{display:flex;justify-content:center;gap:4px;margin-bottom:8px}
+#mobile-trading-demo .m-key-row button{height:32px;min-width:0;flex:1;max-width:28px;border-radius:4px;background:#fff;box-shadow:0 1px 0 #9fa4ae;font-size:15px}
+#mobile-trading-demo .m-key-row:nth-child(2){padding-inline:12px}
+#mobile-trading-demo .m-key-row .m-key-function{background:#b5bac4;max-width:34px;flex:1.4}
+#mobile-trading-demo .m-key-bottom .m-key-space{max-width:none;flex:4;font-size:12px}
+#mobile-trading-demo .m-key-bottom .m-key-function{max-width:none;flex:1.5;font-size:12px}
+#mobile-trading-demo .m-keyboard button:active{background:#e7d0fa}
+#mobile-trading-demo .m-keyboard-gesture{position:absolute;bottom:7px;left:32%;width:36%;height:4px;background:#8b939b;border-radius:4px}
+
+#mobile-trading-demo .m-card-fields input::placeholder{color:#8b939b;opacity:.7;font-weight:400;letter-spacing:normal}
+/* Persistent Top Up actions fill the content width, with primary-action emphasis. */
+#mobile-trading-demo .m-topup-screen .m-order-footer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:8px;padding:8px 18px 12px;align-items:center}
+#mobile-trading-demo .m-topup-screen .m-order-footer button{width:100%;min-width:0;min-height:48px;padding:10px 8px;line-height:1.3}
+#mobile-trading-demo .m-topup-screen .m-order-footer button+button{min-width:0}
+
+#mobile-trading-demo .m-trade-search{display:flex;align-items:center;gap:8px;margin:12px 18px 16px;padding:7px 9px;background:#f4f7ff;border-radius:4px;color:#8b939b}
+#mobile-trading-demo .m-trade-search svg{width:14px;height:14px}
+#mobile-trading-demo .m-trade-search input{width:100%;min-width:0;padding:0;border:0;border-radius:0;background:transparent;color:#111;font:500 12px/1.5 "Trading Avenir Next",sans-serif;letter-spacing:normal;appearance:none;-webkit-appearance:none}
+#mobile-trading-demo .m-trade-search input:focus{outline:none!important;background:transparent!important}
+#mobile-trading-demo .m-trade-search:focus-within{outline:2px solid #8050bf;outline-offset:0}
+#mobile-trading-demo .m-trade-search input::-webkit-search-cancel-button{display:none}
+#mobile-trading-demo .m-trade-results{background:#fff;min-height:100%}
+#mobile-trading-demo .m-trade-result{display:grid;grid-template-columns:18px minmax(0,1fr) auto;align-items:start;gap:7px;padding:15px 18px;width:100%;text-align:left;border-bottom:1px solid #e8ebf4}
+#mobile-trading-demo .m-trade-result .m-brand-logo{width:17px;height:17px;overflow:hidden}
+#mobile-trading-demo .m-trade-result b{font:600 14px/1.3 "Trading Sofia Pro",sans-serif}
+#mobile-trading-demo .m-trade-result small{font-size:11px}
+#mobile-trading-demo .m-trade-quote{text-align:right}
+#mobile-trading-demo .m-trade-empty{padding:20px 18px;color:#8b939b;font-size:12px;text-align:center}
+
+#mobile-trading-demo .m-topup-screen .m-order-footer button:disabled{background:#eadcf5;color:#8b759c;cursor:default!important;box-shadow:none}
+#mobile-trading-demo .m-topup-form .m-deposit-hint{font:400 10px/1.5 "Trading Avenir Next",sans-serif;color:#69717d;margin:12px 0 0}
+#mobile-trading-demo .m-deposit-hint:empty{display:none}
+
+/* Keep the search header on one continuous white surface. */
+#mobile-trading-demo .m-create-trade-screen .m-screen-header{background:#c172fb}
+#mobile-trading-demo .m-create-trade-screen .m-header{display:flow-root;background:#fff}
+#mobile-trading-demo .m-create-trade-screen .m-header-row{display:grid;grid-template-columns:24px minmax(0,1fr) 24px;gap:8px}
+#mobile-trading-demo .m-create-trade-screen .m-header-row>b{text-align:center;justify-self:center}
+#mobile-trading-demo .m-create-trade-screen .m-trade-search{margin-bottom:16px}
+#mobile-trading-demo .m-search-suggestions{display:flex;align-items:center;gap:7px;padding:4px 18px 14px;background:#fff;font-size:10px;color:#8b939b;flex-wrap:wrap}
+#mobile-trading-demo .m-search-suggestions button{color:#8050bf;background:#f4f0ff;padding:5px 8px;border-radius:4px}
+#mobile-trading-demo .m-symbol-title{display:grid;grid-template-columns:22px minmax(0,1fr) 22px;gap:8px}
+#mobile-trading-demo .m-symbol-title>div{display:block;text-align:center}
+#mobile-trading-demo .m-symbol-title>div>span{display:flex;gap:5px;align-items:center;justify-content:center}
+#mobile-trading-demo .m-symbol-title svg.m-brand-logo{width:14px;height:14px;overflow:hidden}
+#mobile-trading-demo .m-symbol-title b{font-size:12px}
+#mobile-trading-demo .m-symbol-title small{font-size:9px}
+#mobile-trading-demo .m-symbol-overview{background:#fff;padding:12px 18px 0}
+#mobile-trading-demo .m-symbol-quote{display:flex;align-items:center;gap:8px}
+#mobile-trading-demo .m-symbol-quote strong{font:600 24px/1.2 "Trading Sofia Pro",sans-serif}
+#mobile-trading-demo .m-symbol-quote>.m-up{font-size:9px;margin-right:auto}
+#mobile-trading-demo .m-symbol-quote button{color:#8b939b;font-size:20px}
+#mobile-trading-demo .m-symbol-quote button svg{width:15px;height:15px}
+#mobile-trading-demo .m-symbol-description{font:500 11px/1.45 "Trading Avenir Next",sans-serif;color:#555;margin-top:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#mobile-trading-demo .m-symbol-description.is-expanded{display:block}
+#mobile-trading-demo .m-read-more{font-size:10px;color:#8b939b;padding:4px 0}
+#mobile-trading-demo .m-symbol-tabs{display:flex;gap:18px;padding:15px 18px 0;background:#fff;border-bottom:1px solid #e8ebf4}
+#mobile-trading-demo .m-symbol-tabs button{font-size:10px;padding:8px 0 14px;border-bottom:2px solid transparent;color:#8b939b}
+#mobile-trading-demo .m-symbol-tabs button[aria-pressed=true]{color:#111;border-bottom-color:#111;font-weight:600}
+#mobile-trading-demo .m-symbol-panel{background:#fff;min-height:190px}
+#mobile-trading-demo .m-trend-labels{display:flex;justify-content:space-between;padding:10px 18px 4px;font-size:11px;color:#8b939b}
+#mobile-trading-demo .m-trend-bar{height:6px;background:#f4f7ff;border-radius:5px;overflow:hidden;margin:0 18px}
+#mobile-trading-demo .m-trend-bar i{display:block;width:80%;height:100%;background:#00c887;border-radius:5px}
+#mobile-trading-demo .m-trend-caption{padding:8px 18px;text-align:center;color:#8b939b;font-size:9px}
+#mobile-trading-demo .m-symbol-chart{position:relative;background:#fff}
+#mobile-trading-demo .m-symbol-chart>svg{display:block;width:100%;height:auto;overflow:hidden}
+#mobile-trading-demo .m-chart-caption{padding:8px 12px;font-size:11px}
+#mobile-trading-demo .m-expand-chart{position:absolute;right:12px;top:30px;width:28px;height:28px;border:1px solid #d7d8e4;background:#fff;border-radius:50%;font-size:20px}
+#mobile-trading-demo .m-chart-footer{display:flex;justify-content:space-between;padding:10px 12px;border-top:1px solid #e8ebf4;font-size:10px}
+#mobile-trading-demo .m-order-footer.m-symbol-footer{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:12px 8px 18px}
+#mobile-trading-demo .m-symbol-footer button{padding:8px 4px;background:#ff6b6b;color:#fff;width:100%;font-size:12px}
+#mobile-trading-demo .m-symbol-footer button+button{background:#00c887}
+
+/* Search suggestions are deliberate, compact company chips. */
+#mobile-trading-demo .m-search-suggestions{display:block;padding:5px 18px 16px;margin:0;background:#fff;border-bottom:1px solid #eef0f7}
+#mobile-trading-demo .m-search-suggestions .m-suggestion-label{margin:0 0 9px;color:#8b939b;font:500 10px/1.4 "Trading Avenir Next",sans-serif}
+#mobile-trading-demo .m-suggestion-chips{display:flex;align-items:center;flex-wrap:wrap;gap:7px}
+#mobile-trading-demo .m-search-suggestions button{display:inline-flex;align-items:center;justify-content:center;gap:5px;margin:0;padding:7px 9px;min-height:32px;border:1px solid #e2e4ee;border-radius:18px;background:#f8f9fd;color:#25232b;font:500 10px/1.3 "Trading Avenir Next",sans-serif;white-space:nowrap;transition:background .12s,border-color .12s}
+#mobile-trading-demo .m-search-suggestions button .m-brand-logo{width:13px;height:13px;overflow:hidden;flex-shrink:0}
+#mobile-trading-demo .m-search-suggestions button:hover{background:#f0e7fc;border-color:#cfa8ed}
+#mobile-trading-demo .m-search-suggestions button[aria-pressed=true]{background:#f0e3ff;border-color:#c172fb;color:#6e319b}
+#mobile-trading-demo .m-search-suggestions button:focus-visible{outline:2px solid #8050bf;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){#mobile-trading-demo .m-search-suggestions button{transition:none}}
+/* Shared circular company badges conceal square artwork backgrounds. */
+#mobile-trading-demo .m-logo-disc{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;width:18px;height:18px;min-width:18px;flex:0 0 18px;box-sizing:border-box;padding:3px;border:1px solid #e8eaf0;border-radius:50%;background:#fff;overflow:hidden}
+#mobile-trading-demo .m-logo-disc svg.m-brand-logo{display:block;width:100%!important;height:100%!important;max-width:100%;flex-shrink:1;overflow:hidden;clip-path:circle(50%)}
+#mobile-trading-demo .m-search-suggestions button .m-logo-disc{width:20px;height:20px;min-width:20px;flex-basis:20px}
+#mobile-trading-demo .m-brand{width:18px;height:18px;overflow:visible}
+#mobile-trading-demo .m-stock{grid-template-columns:18px minmax(0,1fr) 48px 79px}
+#mobile-trading-demo .m-stock:has(.m-spark){grid-template-columns:18px minmax(0,1fr) 70px 48px}
+#mobile-trading-demo .m-order-heading{grid-template-columns:18px minmax(0,1fr) 39px 62px 12px}
+#mobile-trading-demo .m-trade-result{grid-template-columns:18px minmax(0,1fr) auto}
+
+/* Match the stacked mobile sheet used by Top Up, retaining a white search area. */
+#mobile-trading-demo .m-create-trade-screen .m-screen-header{padding-top:12px;position:relative}
+#mobile-trading-demo .m-create-trade-screen .m-header{position:relative;border-radius:10px 10px 0 0;background:#fff;display:flow-root}
+#mobile-trading-demo .m-create-trade-screen .m-screen-header:before{content:'';position:absolute;left:12px;right:12px;top:4px;height:12px;border-radius:8px 8px 0 0;background:#ffffff80}
+
+/* Reserve enough height for equal trade actions and the phone's bottom safe area. */
+#mobile-trading-demo .m-phone.m-symbol-screen:not(.m-keyboard-open){grid-template-rows:35px auto minmax(0,1fr) 84px}
+#mobile-trading-demo .m-symbol-screen .m-order-footer.m-symbol-footer{height:84px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;padding:10px 18px 24px;align-items:center}
+#mobile-trading-demo .m-symbol-screen .m-symbol-footer button{height:48px;min-height:48px;padding:8px 4px;min-width:0}
+#mobile-trading-demo .m-symbol-footer:after{content:'';position:absolute;bottom:8px;left:32%;width:36%;height:4px;border-radius:4px;background:#c9cdd1}
+
+#mobile-trading-demo .m-symbol-quote .m-watch-bell[aria-pressed=true]{color:#e3b400}
+#mobile-trading-demo .m-watch-bell[aria-pressed=true] svg{fill:#ffda00;stroke:#d2a400}
+#mobile-trading-demo .m-interactive-chart{background:#fff}
+#mobile-trading-demo .m-live-chart-toolbar{display:flex;align-items:center;justify-content:space-between;padding:9px 10px;gap:6px;font-size:10px}
+#mobile-trading-demo .m-live-chart-toolbar>div{display:flex;gap:3px}
+#mobile-trading-demo .m-live-chart-toolbar button{padding:5px;border-radius:3px;color:#8b939b;font-size:9px}
+#mobile-trading-demo .m-live-chart-toolbar button[aria-pressed=true]{background:#f0e3ff;color:#8050bf}
+#mobile-trading-demo .m-chart-ohlc{font:400 8px/1.5 "Trading Avenir Next",sans-serif;padding:0 10px 7px;color:#737d8b;white-space:nowrap}
+#mobile-trading-demo .m-live-chart-canvas{width:100%;height:240px;min-width:0}
+#mobile-trading-demo .m-interactive-chart.is-expanded .m-live-chart-canvas{height:340px}
+#mobile-trading-demo .m-chart-controls{display:flex;align-items:center;justify-content:space-between;padding:6px 10px;border-top:1px solid #e8ebf4}
+#mobile-trading-demo .m-chart-controls>div{display:flex;gap:6px}
+#mobile-trading-demo .m-chart-controls button{height:28px;min-width:28px;padding:4px 7px;background:#f4f7ff;border-radius:3px;font-size:12px}
+#mobile-trading-demo .m-chart-attribution{display:flex;justify-content:space-between;gap:8px;padding:3px 10px;font-size:7px;color:#8b939b}
+#mobile-trading-demo .m-chart-attribution a{color:#737d8b;text-decoration:underline}
+#mobile-trading-demo small.m-chart-copyright{font-size:6px;text-align:right;padding:0 10px 6px;color:#8b939b}
+
+/* Trade creation options and inline validation from the supplied mobile screens. */
+#mobile-trading-demo .m-protected-label{display:block;color:#19a4ce;font-size:10px;margin-top:3px}
+#mobile-trading-demo .m-trade-instrument{display:flex;align-items:center;gap:8px;padding:12px 18px 18px}
+#mobile-trading-demo .m-trade-instrument>span:last-child{margin-left:auto;text-align:right}
+#mobile-trading-demo .m-trade-instrument small{display:block;color:#8b939b;font-size:10px;margin-top:3px}
+#mobile-trading-demo .m-trade-instrument b{font-size:14px}
+#mobile-trading-demo .m-trade-expiration>input{width:100%;padding:12px 0;font-size:15px}
+#mobile-trading-demo .m-special-offers{padding:18px;background:linear-gradient(120deg,#a85ceb,#c172fb);color:#fff}
+#mobile-trading-demo .m-special-offers h3{font-size:20px;margin:0 0 18px}
+#mobile-trading-demo .m-special-offers label{display:block;position:relative;padding:25px 12px 14px 38px;background:#ffffff18;border:1px solid #ffffff70;border-radius:4px;margin-top:20px;font-size:12px;line-height:1.5}
+#mobile-trading-demo .m-special-offers label>span{position:absolute;top:-9px;left:12px;background:#ffdf00;color:#111;padding:2px 7px;font-size:9px;font-weight:700}
+#mobile-trading-demo .m-special-offers input{position:absolute;left:12px;top:27px;width:16px;height:16px;accent-color:#fff}
+#mobile-trading-demo .m-trade-error{padding:12px;margin-top:10px;background:#fff0f1;border:1px solid #ffccd0;border-radius:4px;color:#cf3547;font-size:11px;line-height:1.5}
+#mobile-trading-demo .m-trade-error[hidden]{display:none}
+#mobile-trading-demo .m-order-form input[aria-invalid="true"]{border-color:#cf3547;outline:1px solid #cf3547;outline-offset:1px;background:#fff0f1}
+#mobile-trading-demo .m-trade-error button{display:block;width:100%;margin-top:10px;padding:12px;background:#c172fb;color:#fff;border-radius:22px;font-size:12px;font-weight:600}
+#mobile-trading-demo .m-form-card input[aria-invalid=true]{border-bottom-color:#e14c5c;color:#cf3547}
+
+/* Isolate form typography from the portfolio's monospace label rules. */
+#mobile-trading-demo .m-order-form :is(label,small,output,span,b){font-family:"Trading Avenir Next",Arial,sans-serif;letter-spacing:normal;text-transform:none;word-spacing:normal}
+#mobile-trading-demo .m-order-form label{line-height:1.4}
+#mobile-trading-demo .m-form-card>label small{color:#8b939b;font-size:9px;margin-left:5px}
+#mobile-trading-demo .m-form-card>label:first-child{font-weight:700}
+#mobile-trading-demo .m-option{font-weight:600}
+#mobile-trading-demo .m-form-card input:disabled{color:#8b939b;opacity:1}
+#mobile-trading-demo .m-trade-options-screen .m-trade-title{color:#111;font:600 16px/1.3 "Trading Sofia Pro",sans-serif}
+#mobile-trading-demo .m-symbol-title .m-protected-label{display:flex;justify-content:center;align-items:center;gap:3px;color:#19a4ce;font:500 9px/1.4 "Trading Avenir Next",sans-serif}
+#mobile-trading-demo .m-protected-label svg{width:9px;height:11px}
+#mobile-trading-demo .m-trade-instrument{padding:9px 18px;border-top:1px solid #e8ebf4;gap:5px}
+#mobile-trading-demo .m-trade-instrument>span:nth-child(2){min-width:0}
+#mobile-trading-demo .m-trade-instrument b{font-size:12px}
+#mobile-trading-demo .m-trade-instrument small{font-size:9px}
+#mobile-trading-demo .m-trade-instrument .m-trade-spark{width:76px;height:22px;flex:1 1 50px;margin:0 8px}
+#mobile-trading-demo .m-trade-price{color:#111;font-size:12px;font-weight:600;white-space:nowrap}
+#mobile-trading-demo .m-trade-instrument small.m-up{color:#00c887}
+#mobile-trading-demo .m-special-offers{margin:0;border-radius:4px;background:linear-gradient(135deg,#c58bff,#d891fa);padding:18px 20px 20px}
+#mobile-trading-demo .m-special-offers h3{text-align:center;font:600 28px/1.2 "Trading Sofia Pro",sans-serif;margin:0 0 28px}
+#mobile-trading-demo .m-special-offers label{color:#111;background:#fff;border:0;padding:25px 10px 20px 40px;margin-top:12px;font-weight:400}
+#mobile-trading-demo .m-special-offers label>span{left:auto;right:0;top:0;font-size:9px;padding:3px 6px}
+#mobile-trading-demo .m-special-offers input{top:35px;accent-color:#a85ceb}
+#mobile-trading-demo .m-protection>span{font-size:8px;line-height:1.4;white-space:nowrap;letter-spacing:normal}
+
+/* Keep order direction explicit in both the heading and final action. */
+#mobile-trading-demo .m-trade-heading{display:flex;align-items:center;justify-content:center;gap:7px}
+#mobile-trading-demo .m-side-chip{display:inline-flex;align-items:center;padding:3px 7px;border-radius:4px;font:700 9px/1.3 "Trading Avenir Next",Arial,sans-serif;letter-spacing:.03em}
+#mobile-trading-demo .m-side-chip.is-buy{background:#dcf8ec;color:#08764e}
+#mobile-trading-demo .m-side-chip.is-sell{background:#ffe5e7;color:#ad2636}
+#mobile-trading-demo .m-order-footer .m-submit-trade.is-buy{background:#00c887;color:#fff}
+#mobile-trading-demo .m-order-footer .m-submit-trade.is-sell{background:#ff6b6b;color:#fff}
+#mobile-trading-demo .m-order-footer .m-submit-trade:disabled{background:#e6e8ed;color:#9299a3;opacity:1;cursor:default}
+
+/* Separate the fixed instrument summary from content only while scrolled. */
+#mobile-trading-demo .m-trade-options-screen.m-content-scrolled .m-trade-instrument{box-shadow:inset 0 -1px 0 #d7d8e4}
+
+/* The whole field receives the same focus treatment as Top Up inputs. */
+#mobile-trading-demo .m-units-field{padding:9px 8px 0;background:#f4f7ff}
+#mobile-trading-demo .m-units-field label{font-size:15px;font-weight:700}
+#mobile-trading-demo .m-units-field small{display:inline;color:#8b939b;font-size:9px;font-weight:400;margin-left:5px}
+#mobile-trading-demo .m-units-field:focus-within{outline:2px solid #8050bf;outline-offset:0}
+#mobile-trading-demo .m-units-field #m-order-units{width:100%;margin:6px 0 10px;border-bottom-color:#111}
+#mobile-trading-demo .m-order-form input:not([type=checkbox]):not([type=radio]):focus{outline:2px solid #8050bf;outline-offset:0;box-shadow:none}
+#mobile-trading-demo .m-units-field #m-order-units:focus{outline:none!important;box-shadow:none}
+#mobile-trading-demo .m-order-form input[type=number]{appearance:textfield;-moz-appearance:textfield}
+#mobile-trading-demo .m-order-form input[type=number]::-webkit-inner-spin-button,#mobile-trading-demo .m-order-form input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+
+#mobile-trading-demo .m-rate-control button:not(:disabled){color:#000}
+
+#mobile-trading-demo .m-order-controls button{display:grid;place-items:center}
+#mobile-trading-demo .m-order-controls .m-order-action-icon{width:20px;height:22px;overflow:hidden}
+
+#mobile-trading-demo .m-order-heading .m-order-status{display:flex;gap:3px;margin-top:3px}
+#mobile-trading-demo .m-submit-trade[aria-busy=true]{opacity:.7;cursor:wait}
+#mobile-trading-demo .m-orders .m-order-heading{min-height:58px}
+
+/* Read state, rather than list position, determines the notification background. */
+#mobile-trading-demo .m-notification{background:#fff}
+#mobile-trading-demo .m-notification.m-unread{background:#f4f7ff}
+
+/* Latest trade stays full width; earlier trades form one indented thread. */
+#mobile-trading-demo .m-order-child{background:#fff;padding:0 0 12px}
+#mobile-trading-demo .m-order-child .m-order-grid{gap:18px 8px;padding:14px 0}
+#mobile-trading-demo .m-order-date time{display:block;font-size:10px;line-height:1.5;font-weight:600;font-variant-numeric:tabular-nums}
+#mobile-trading-demo .m-order-controls>small{margin-right:auto;font-size:8px;color:#8b939b}
+#mobile-trading-demo .m-order-thread{margin:0 -18px -8px -18px;padding:0 18px 0 16px;background:#fff;border-left:34px solid #f4f7ff;border-top:1px solid #e8ebf4}
+#mobile-trading-demo .m-order-thread .m-order-child{padding:8px 0 14px}
+#mobile-trading-demo .m-order-thread .m-order-child+.m-order-child{border-top:1px dashed #c9cdd1}
+/* Trade date drawer and export menu, contained within the phone. */
+#mobile-trading-demo .m-tabs:has(.m-more-filters){padding-right:104px;position:relative;gap:14px}
+#mobile-trading-demo .m-tabs .m-more-filters{position:absolute;right:10px;top:3px;z-index:2;background:#cc8bfa;color:#fff;padding:5px 8px;border-radius:5px;font-weight:600;order:9}
+#mobile-trading-demo .m-trade-list-tools{display:flex;align-items:center;justify-content:space-between;padding:18px;background:#fff;gap:8px}
+#mobile-trading-demo .m-trade-list-tools h3{font-size:15px}
+#mobile-trading-demo .m-trade-list-tools small{font-size:8px;margin-top:3px}
+#mobile-trading-demo .m-export-wrap{position:relative}
+#mobile-trading-demo .m-export-wrap>button{background:#f4f7ff;border-radius:22px;padding:8px 13px;font-size:11px;font-weight:600}
+#mobile-trading-demo .m-export-menu{position:absolute;right:0;top:34px;width:156px;background:#fff;z-index:6;box-shadow:0 4px 16px #20233120;border-radius:5px;overflow:hidden}
+#mobile-trading-demo .m-export-menu button{display:flex;align-items:center;gap:9px;width:100%;padding:13px 12px;text-align:left;font-size:12px}
+#mobile-trading-demo .m-export-menu button+button{border-top:1px solid #e8ebf4}
+#mobile-trading-demo .m-export-menu button:hover{background:#f4f7ff}
+#mobile-trading-demo .m-export-pdf{color:#fb7272;font-size:8px;font-weight:700}
+#mobile-trading-demo .m-export-excel{background:#14804a;color:#fff;padding:1px 4px;font-size:10px;font-weight:700}
+#mobile-trading-demo .m-filter-backdrop{position:absolute;inset:0;z-index:11;background:#22283840}
+#mobile-trading-demo .m-trade-filters{position:absolute;inset:0 0 0 24px;z-index:12;background:#fff;padding:24px 20px 22px;overflow:auto}
+#mobile-trading-demo .m-filter-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:30px}
+#mobile-trading-demo .m-filter-heading>button:first-child{color:#8b939b;font-size:11px}
+#mobile-trading-demo .m-filter-heading>button:last-child{background:#c172fb;color:#fff;font-size:12px;font-weight:600;padding:10px 15px;border-radius:24px}
+#mobile-trading-demo .m-trade-filters>p{color:#8b939b;font-size:12px;margin-bottom:10px}
+#mobile-trading-demo .m-date-presets{display:flex;flex-wrap:wrap;gap:5px}
+#mobile-trading-demo .m-date-presets button{background:#f4f7ff;padding:10px 11px;border-radius:5px;font-size:11px}
+#mobile-trading-demo .m-date-presets button[aria-pressed=true]{background:#ffdf00;color:#111}
+#mobile-trading-demo .m-custom-dates{display:grid;gap:12px;margin-top:20px}
+#mobile-trading-demo .m-custom-dates label{font:400 11px/1.4 "Trading Avenir Next",sans-serif;letter-spacing:normal;text-transform:none;color:#8b939b}
+#mobile-trading-demo .m-custom-dates input{display:block;width:100%;min-width:0;padding:10px 6px;margin-top:4px;font:400 12px "Trading Avenir Next",sans-serif;background:#f4f7ff;border:0;border-bottom:1px solid #111;color:#111}
+#mobile-trading-demo .m-trade-filters p.m-filter-error{color:#cf3547;font-size:11px;margin-top:12px}
+
+#mobile-trading-demo .m-fx-logo{font-size:8px;font-weight:700;color:#526481;padding:1px;background:#f4f7ff}
+#mobile-trading-demo .m-event-pair-list{padding:18px;background:#fff;min-height:100%}
+#mobile-trading-demo .m-event-pair-list>p{font-size:13px;margin-bottom:7px}
+#mobile-trading-demo .m-event-pair-list>small{font-size:10px;margin-bottom:18px}
+#mobile-trading-demo .m-event-pair-list>button{display:flex;align-items:center;gap:8px;width:100%;padding:18px 0;border-bottom:1px solid #e8ebf4;text-align:left}
+#mobile-trading-demo .m-event-pair-list>button>b{margin-left:auto;font-size:12px}
+#mobile-trading-demo .m-event-pair-list button small{margin-top:4px}
+#mobile-trading-demo .m-event-trade-context{padding:12px 18px;background:#f4f7ff;color:#737d8b;font-size:10px}
+
+#mobile-trading-demo .m-trade-status-chip{display:inline-flex;align-items:center;min-height:0;width:max-content;padding:1px 3px;border-radius:3px;font:600 9px/1.3 "Trading Avenir Next",Arial,sans-serif;letter-spacing:normal}
+#mobile-trading-demo .m-trade-status-chip.is-open{background:#dcf8ec;color:#08764e}
+#mobile-trading-demo .m-trade-status-chip.is-pending{background:#fff4c2;color:#795b00}
+
+
+/* Date selection keeps its blue surface after touch; keyboard focus stays visible. */
+#mobile-trading-demo .m-order-form .m-trade-expiration input[name=demoExpiry]{background:#f4f7ff;padding:12px 10px;border-bottom:1px solid #111}
+#mobile-trading-demo .m-order-form .m-trade-expiration input[name=demoExpiry]:focus,#mobile-trading-demo .m-order-form .m-trade-expiration input[name=demoExpiry]:focus-visible{outline:none;box-shadow:none}
+#mobile-trading-demo[data-focus-mode=keyboard] .m-order-form .m-trade-expiration input[name=demoExpiry]:focus{outline:2px solid #8050bf;outline-offset:0}
+
+/* Purple-header tabs share selection and pointer-focus behavior. */
+#mobile-trading-demo .m-tabs button:is([data-m-filter],[data-order-filter]){padding:5px 0;border:0;border-radius:0;line-height:1.4;background:transparent}
+#mobile-trading-demo .m-tabs button[aria-pressed=false]{color:#ffffffa8;font-weight:400}
+#mobile-trading-demo .m-tabs button[aria-pressed=true]{color:#fff;font-weight:600}
+#mobile-trading-demo[data-focus-mode=pointer] .m-tabs button:focus{outline:none;box-shadow:none}
+#mobile-trading-demo[data-focus-mode=keyboard] .m-tabs button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+#mobile-trading-demo .m-greeting .m-home-protected{display:flex;align-items:center;gap:3px}
+#mobile-trading-demo .m-home-protected svg{width:10px;height:12px}

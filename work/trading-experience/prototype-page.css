@@ -1,0 +1,18 @@
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#000;color:#fff;font-family:Arial,sans-serif}
+.prototype-toolbar{min-height:76px;padding:16px 28px;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:16px;border-bottom:1px solid #333;font-size:13px}
+.prototype-toolbar a{color:inherit;text-decoration:none}
+.prototype-toolbar a:hover{text-decoration:underline;text-underline-offset:4px}
+.prototype-toolbar span{color:#aaa;font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-align:center}
+.prototype-toolbar button{justify-self:end;display:inline-flex;align-items:center;gap:8px;border:1px solid #777;background:transparent;color:#fff;padding:12px 18px;font:inherit;cursor:pointer;transition:background-color .22s,border-color .22s,color .22s}
+.prototype-toolbar button span{color:inherit;font:inherit;letter-spacing:normal;text-transform:none}
+.prototype-toolbar button svg{flex-shrink:0}
+.prototype-toolbar button:hover{background:#49a85d;border-color:#49a85d;color:#000}
+.prototype-toolbar a{justify-self:start}
+.prototype-toolbar :is(a,button):focus-visible{outline:2px solid #49a85d;outline-offset:4px}
+.prototype-stage{min-height:calc(100svh - 76px);padding:24px 16px;display:grid;place-items:center}
+.prototype-stage #mobile-trading-demo{width:100%;overflow:visible}
+.prototype-stage #mobile-trading-demo .m-device{zoom:var(--prototype-scale,1)}
+.prototype-stage #mobile-trading-demo .m-device{background:linear-gradient(110deg,#33363b,#50545a 45%,#292c31 75%,#3c4046);box-shadow:0 0 0 1px #686d74,0 0 0 2px #30343a}
+.prototype-stage #mobile-trading-demo .m-phone{border-color:#22252a}
+@media(max-width:520px){.prototype-toolbar{padding:14px 16px;font-size:11px;gap:12px;grid-template-columns:minmax(0,1fr) auto;min-height:70px}.prototype-toolbar span{grid-column:1 / -1;grid-row:2}.prototype-stage{padding:18px 12px;min-height:calc(100svh - 102px)}}
