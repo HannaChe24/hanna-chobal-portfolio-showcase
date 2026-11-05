@@ -1,0 +1,394 @@
+/* Shared editorial system for every full case-study page. */
+.workflow-page {
+  --case-section-space: clamp(57.6px, 7.68vw, 108.8px);
+  --case-block-space: clamp(44.8px, 5.76vw, 83.2px);
+  font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  text-align: left;
+}
+
+.workflow-page .workflow-hero,
+.workflow-page .workflow-content,
+.workflow-page .principle,
+.workflow-page .screen-gallery,
+.workflow-page .case-chapters,
+.workflow-page .case-outcomes article,
+.workflow-page .trading-experience-action,
+.workflow-page .trading-experience-gallery,
+.workflow-page .project-snapshot,
+.workflow-page .brand-logic,
+.workflow-page .public-reference {
+  padding-left: var(--case-gutter);
+  padding-right: var(--case-gutter);
+}
+
+.workflow-page .external-product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0;
+  padding-bottom: 7px;
+  border-bottom: 1px solid currentColor;
+  font: 500 12px/1.4 "DM Mono", monospace;
+  letter-spacing: .07em;
+  transition: color .22s ease, border-color .22s ease;
+}
+
+.workflow-page .external-product-link:hover,
+.workflow-page .external-product-link:focus-visible {
+  color: #49a85d;
+  border-color: #49a85d;
+}
+
+.workflow-page .case-navigation {
+  padding: clamp(65px, 8vw, 110px) var(--case-gutter);
+  border-top: 1px solid rgba(255, 255, 255, .35);
+  background: #000;
+  color: #fff;
+}
+
+.workflow-page .case-navigation a {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: end;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.workflow-page .case-navigation a > span {
+  flex: 0 0 100%;
+  font: 500 11px/1.4 "DM Mono", monospace;
+  letter-spacing: .07em;
+  opacity: .62;
+}
+
+.workflow-page .case-navigation a > strong {
+  font-size: var(--case-heading, clamp(3rem, 5.5vw, 6rem));
+  line-height: .88;
+  letter-spacing: 1px;
+}
+
+.workflow-page .case-navigation a > b {
+  margin-left: 2px;
+  font: 400 clamp(2rem, 4vw, 4rem)/1 "DM Mono", monospace;
+  transition: color .22s ease, transform .22s ease;
+}
+
+.workflow-page .case-navigation a:hover b,
+.workflow-page .case-navigation a:focus-visible b {
+  color: #49a85d;
+  transform: translateX(5px);
+}
+
+@media (max-width: 700px) {
+  .workflow-page .case-navigation a {
+    gap: 10px;
+  }
+}
+
+.workflow-page .workflow-hero {
+  padding-top: clamp(100px, 13vw, 190px);
+  padding-bottom: clamp(70px, 9vw, 130px);
+}
+
+.workflow-page .workflow-hero h1,
+.workflow-page h2 {
+  letter-spacing: 1px !important;
+  word-spacing: 10px;
+  text-align: left;
+}
+
+.workflow-page .workflow-lead,
+.workflow-page .case-intro {
+  width: min(610px, 100%);
+  max-width: 610px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+.workflow-page .case-role {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: min(610px, 100%);
+  margin: 0 0 clamp(30px, 4vw, 48px);
+  padding: 15px 0 17px;
+  border-top: 1px solid var(--case-line);
+  border-bottom: 1px solid var(--case-line);
+  gap: 0;
+}
+
+.workflow-page .case-role > div {
+  min-width: 0;
+  padding: 15px 0;
+  border-top: 1px solid var(--case-line);
+}
+
+.workflow-page .case-role > div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.workflow-page .case-role > div:last-child {
+  padding-bottom: 0;
+}
+
+.workflow-page .case-role dt {
+  margin: 0 0 7px;
+  font: 500 11px/1.4 "DM Mono", monospace;
+  letter-spacing: .07em;
+}
+
+.workflow-page .case-role dd {
+  margin: 0;
+  font: 500 15px/1.45 "DM Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.workflow-page .workflow-content,
+.workflow-page .case-chapters,
+.workflow-page .trading-experience-action,
+.workflow-page .trading-experience-gallery,
+.workflow-page .project-snapshot,
+.workflow-page .brand-logic,
+.workflow-page .public-reference {
+  padding-top: var(--case-section-space);
+  padding-bottom: var(--case-section-space);
+}
+
+.workflow-page .workflow-content article,
+.workflow-page .case-chapter {
+  padding-top: 35px;
+  padding-bottom: var(--case-block-space);
+}
+
+/* Never place a section divider directly beneath the main case photograph. */
+.workflow-page .workflow-image + .project-snapshot,
+.workflow-page .workflow-image + .workflow-content > article:first-child {
+  border-top: 0 !important;
+}
+
+/* Editorial articles use one predictable vertical reading column at every width. */
+.workflow-page .workflow-content,
+.workflow-page .case-chapter,
+.workflow-page .project-snapshot,
+.workflow-page .brand-logic,
+.workflow-page .public-reference,
+.workflow-page .action-copy,
+.workflow-page .screen-gallery,
+.workflow-page .trading-experience-gallery,
+.workflow-page .trading-experience-gallery header {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.workflow-page .workflow-content article,
+.workflow-page .workflow-content article:nth-child(odd) {
+  padding-left: 0;
+  padding-right: 0;
+  border-right: 0;
+}
+
+.workflow-page .case-chapter.reverse .chapter-copy,
+.workflow-page .case-chapter.reverse .screen-slot {
+  order: initial;
+}
+
+.workflow-page .screen-gallery-head,
+.workflow-page .trading-experience-gallery header,
+.workflow-page .trading-experience-screen,
+.workflow-page .trading-experience-screen.wide,
+.workflow-page .market-analysis-gallery .screen-card {
+  grid-column: 1;
+}
+
+.workflow-page .action-copy h2,
+.workflow-page .action-copy > p:last-child {
+  grid-column: 1;
+}
+
+.workflow-page .action-steps,
+.workflow-page .logic-columns,
+.workflow-page .paired-needs,
+.workflow-page .result-tags {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.workflow-page .action-steps li,
+.workflow-page .action-steps li:nth-child(3) {
+  min-height: 0;
+  border-left: 1px solid var(--case-line);
+  border-bottom: 1px solid var(--case-line);
+}
+
+.workflow-page .action-steps b {
+  margin-top: 35px;
+}
+
+.workflow-page .result-tags span {
+  border-right: 0;
+  border-bottom: 1px solid var(--case-line);
+}
+
+.workflow-page .result-tags span:last-child {
+  border-bottom: 0;
+}
+
+.workflow-page :is(.workflow-content, .case-chapter, .project-snapshot, .brand-logic, .public-reference, .action-copy, .trading-experience-gallery header, .case-outcomes article) :is(.case-label, h2, p, ul, dl) {
+  text-align: left;
+}
+
+.workflow-page :is(.workflow-content article, .chapter-copy, .project-snapshot > div, .brand-logic > div, .public-reference > div, .action-copy, .case-outcomes article) > p:not(.case-label) {
+  max-width: 590px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.workflow-page .workflow-image img,
+.workflow-page .trading-experience-screen img,
+.workflow-page .trading-experience-screen.wide img {
+  object-fit: contain;
+  object-position: center;
+}
+
+/* One diagram language across every case: page background, divider-weight outlines, system arrows. */
+.workflow-page .principle {
+  border-top: 1px solid var(--case-line);
+  border-bottom: 1px solid var(--case-line);
+  background: var(--case-paper);
+  color: #111;
+}
+
+.workflow-page .case-diagram {
+  display: flex;
+  align-items: stretch;
+  width: min(1120px, 100%);
+  margin-top: 28px;
+  padding: 0;
+  gap: clamp(14px, 2vw, 28px);
+  background: transparent;
+  color: #111;
+}
+
+.workflow-page .case-diagram .diagram-node {
+  display: flex;
+  flex: 1 1 0;
+  min-height: clamp(92px, 10vw, 132px);
+  align-items: center;
+  padding: clamp(16px, 2.2vw, 28px);
+  border: 1px solid var(--case-line);
+  background: transparent;
+  color: #111;
+  font: 700 clamp(1rem, 1.8vw, 2rem)/1.03 "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.workflow-page .case-diagram .diagram-arrow {
+  display: grid;
+  flex: 0 0 clamp(42px, 5vw, 72px);
+  place-items: center;
+  font-size: clamp(18px, 1.7vw, 26px);
+  line-height: 1;
+  color: #111;
+}
+
+.workflow-page .chapter-flow.case-diagram {
+  width: min(1120px, 100%);
+  margin-top: 30px !important;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #111;
+}
+
+.workflow-page .chapter-flow.case-diagram .diagram-node {
+  min-height: clamp(92px, 10vw, 132px);
+  padding: clamp(16px, 2.2vw, 28px);
+  border-color: var(--case-line);
+  color: #111;
+  font-size: clamp(1rem, 1.8vw, 2rem);
+}
+
+.workflow-page .chapter-flow.case-diagram .diagram-arrow {
+  color: #111;
+}
+
+.workflow-page .principle .case-diagram {
+  margin-top: 28px;
+  padding: 0;
+}
+
+.workflow-page .principle .diagram-node {
+  min-height: clamp(92px, 10vw, 132px);
+  color: #111;
+  font: 700 clamp(1rem, 1.8vw, 2rem)/1.03 "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+
+/* Numbered content always uses the same face and punctuation as its heading. */
+.workflow-page .numbered-title {
+  font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.workflow-page .action-steps span,
+.workflow-page .action-steps b {
+  font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.workflow-page .action-steps span {
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .workflow-page {
+    --case-gutter: 22px;
+    --case-section-space: 78px;
+    --case-block-space: 58px;
+  }
+
+  .workflow-page .workflow-content,
+  .workflow-page .case-chapter,
+  .workflow-page .project-snapshot,
+  .workflow-page .brand-logic,
+  .workflow-page .public-reference,
+  .workflow-page .action-copy,
+  .workflow-page .trading-experience-gallery header {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-page .workflow-content article,
+  .workflow-page .workflow-content article:nth-child(odd) {
+    padding-left: 0;
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .workflow-page .case-diagram {
+    flex-direction: column;
+  }
+
+  .workflow-page .case-diagram .diagram-node {
+    flex-basis: auto;
+    width: 100%;
+    min-height: 62px;
+  }
+
+  .workflow-page .case-diagram .diagram-arrow {
+    flex-basis: 38px;
+    width: 38px;
+    transform: none;
+  }
+
+  .workflow-page .principle .diagram-node {
+    min-height: 86px;
+  }
+}
+
+/* Compact evidence summaries share the case studies’ ruled editorial language. */
+.workflow-page .decision-evidence { margin: 28px 0 0; border-top: 1px solid currentColor; }
+.workflow-page .decision-evidence > div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 24px; padding: 18px 0; border-bottom: 1px solid rgba(128,128,128,.35); }
+.workflow-page .decision-evidence dt { font: 400 12px/1.5 var(--mono, monospace); letter-spacing: .05em; }
+.workflow-page .decision-evidence dd { margin: 0; font-size: 18px; line-height: 1.5; }
+@media (max-width:700px) { .workflow-page .decision-evidence > div { grid-template-columns: 1fr; gap: 8px; } }

@@ -1,0 +1,439 @@
+/* Shared structure for the protected case studies. */
+.unified-case-page {
+  --case-rhythm: clamp(56.32px, 6.4vw, 92.16px);
+  --case-content-gap: clamp(28px, 2.7vw, 38px);
+  --case-accent: #49a85d;
+  font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Match the market-analysis editorial typography exactly. */
+.workflow-page.unified-case-page .workflow-hero h1,
+.workflow-page.unified-case-page h2 {
+  letter-spacing: 1px !important;
+  word-spacing: 10px;
+}
+
+.workflow-page.unified-case-page .workflow-lead {
+  width: min(610px, 100%);
+  max-width: 610px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  line-height: 1.35;
+}
+
+.workflow-page.unified-case-page .case-intro {
+  width: min(610px, 100%);
+  max-width: 610px;
+  margin: 28px 0 0;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.workflow-page.unified-case-page .workflow-hero {
+  padding-bottom: var(--case-rhythm);
+}
+
+.workflow-page.unified-case-page .workflow-image {
+  aspect-ratio: auto;
+  background: transparent;
+}
+
+.workflow-page.unified-case-page .workflow-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Match both protected-case hero stages to the 16:9 market-analysis hero. */
+.workflow-page.unified-case-page .workflow-image:is(.trading-experience-hero-image, .task-management-hero-image) {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: transparent;
+}
+
+.workflow-page.unified-case-page .workflow-image:is(.trading-experience-hero-image, .task-management-hero-image) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.workflow-page.unified-case-page .workflow-hero > :last-child,
+.workflow-page.unified-case-page :is(.workflow-content article, .chapter-copy, .case-outcomes article) > :last-child {
+  margin-bottom: 0;
+}
+
+.workflow-page.unified-case-page .case-intro {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.workflow-page.unified-case-page :is(.workflow-content, .case-chapters) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.workflow-page.unified-case-page :is(.workflow-content article, .case-chapter, .case-outcomes article) {
+  padding-top: var(--case-rhythm);
+  padding-bottom: var(--case-rhythm);
+  border-top: 1px solid var(--case-line);
+}
+
+.workflow-page.unified-case-page :is(.workflow-content article > .case-label, .chapter-copy > .case-label, .case-outcomes article > .case-label) {
+  margin-top: 0;
+}
+
+.workflow-page.unified-case-page .workflow-content {
+  border-bottom: 0;
+}
+
+.workflow-page.unified-case-page .workflow-content article,
+.workflow-page.unified-case-page .workflow-content article:nth-child(odd) {
+  border-right: 0;
+}
+
+.workflow-page.unified-case-page .project-snapshot {
+  display: block;
+  padding-top: var(--case-rhythm);
+  padding-bottom: var(--case-rhythm);
+  border-top: 1px solid var(--case-line);
+  border-bottom: 0;
+}
+
+.workflow-page.unified-case-page .project-snapshot > div {
+  max-width: 900px;
+}
+
+.workflow-page.unified-case-page .project-snapshot > div + div {
+  margin-top: var(--case-content-gap);
+}
+
+.workflow-page.unified-case-page .project-snapshot :is(.case-label, h2, p) {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.workflow-page.unified-case-page .project-snapshot h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: clamp(2rem, 3.7vw, 4.15rem);
+  line-height: .95;
+}
+
+.workflow-page.unified-case-page .project-snapshot p:not(.case-label) {
+  max-width: 590px;
+  margin-top: 0;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.workflow-page.unified-case-page .task-transformation {
+  width: min(1120px, 100%);
+  margin-top: clamp(42px, 5vw, 68px);
+}
+
+.workflow-page.unified-case-page .task-transformation > .case-label {
+  margin: 0;
+}
+
+.workflow-page.unified-case-page .task-transformation .case-diagram {
+  margin-top: 20px;
+}
+
+.workflow-page.unified-case-page .how-might-we {
+  margin-top: var(--case-content-gap);
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.workflow-page.unified-case-page .case-chapter {
+  display: block;
+}
+
+.workflow-page.unified-case-page .chapter-copy {
+  width: min(900px, 100%);
+}
+
+.workflow-page.unified-case-page .chapter-copy h2 {
+  margin: 28px 0;
+  font-size: clamp(2rem, 3.7vw, 4.15rem);
+  line-height: .95;
+}
+
+.workflow-page.unified-case-page .chapter-copy > p:not(.case-label),
+.workflow-page.unified-case-page .chapter-copy > ul {
+  max-width: 590px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.workflow-page.unified-case-page .chapter-copy ul {
+  margin: 24px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.workflow-page.unified-case-page .chapter-copy li + li {
+  margin-top: 8px;
+}
+
+.workflow-page.unified-case-page .chapter-copy li::before {
+  content: '→';
+  margin-right: 10px;
+  color: var(--case-accent);
+}
+
+.workflow-page.unified-case-page .chapter-emphasis {
+  font-size: clamp(1.4rem, 2.4vw, 2.4rem) !important;
+  font-weight: 700;
+  line-height: 1.15 !important;
+}
+
+/* Shared black horizontal product gallery. */
+.workflow-page.unified-case-page .case-product-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 0;
+  padding: 0 var(--case-gutter);
+}
+
+.workflow-page.unified-case-page .case-product-gallery .screen-gallery-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+  padding-top: var(--case-rhythm);
+  border-top: 1px solid var(--case-line);
+}
+
+.workflow-page.unified-case-page .case-product-gallery .screen-gallery-head h2 {
+  max-width: 1100px;
+  margin: 0;
+  font-size: clamp(1.55rem, 4.6vw, 4.15rem);
+  line-height: .92;
+}
+
+.workflow-page.unified-case-page .case-product-gallery .screen-gallery-head > p:not(.case-label) {
+  max-width: 590px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.case-product-gallery .product-scroll {
+  grid-column: 1 / -1;
+  width: calc(100% + var(--case-gutter) + var(--case-gutter));
+  margin: var(--case-rhythm) calc(0px - var(--case-gutter)) 0;
+  background: #000;
+}
+
+.case-product-gallery .product-scroll-sticky {
+  --product-stage-height: 100svh;
+  position: relative;
+  display: grid;
+  align-items: center;
+  width: 100%;
+  height: var(--product-stage-height);
+  min-height: 620px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.case-product-gallery .product-scroll-sticky::-webkit-scrollbar { display: none; }
+
+.case-product-gallery .product-scroll.is-horizontal-ready .product-scroll-sticky {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+.case-product-gallery .product-mosaic,
+.case-product-gallery .product-scroll.is-horizontal-ready .product-mosaic {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  height: 100%;
+  gap: clamp(54px, 8vw, 142px);
+  padding: clamp(76px, 10vh, 118px) var(--product-edge, clamp(22px, 8vw, 132px)) clamp(88px, 12vh, 138px);
+  will-change: transform;
+}
+
+.case-product-gallery .product-shot {
+  position: relative;
+  display: grid;
+  flex: 0 0 min(74vw, calc(var(--product-stage-height) - 60px), 1080px);
+  grid-template-rows: minmax(0, 1fr) auto;
+  width: min(74vw, calc(var(--product-stage-height) - 60px), 1080px);
+  min-height: 0;
+  margin: 0;
+  background: transparent;
+  color: #fff;
+  cursor: zoom-in;
+  transition: opacity .2s ease;
+}
+
+.case-product-gallery .product-shot:hover { opacity: .88; }
+.case-product-gallery .product-shot:focus-visible { outline: 2px solid #fff; outline-offset: 8px; }
+
+.case-product-gallery .product-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+
+.case-product-gallery .product-shot figcaption {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 16px;
+  align-items: baseline;
+  padding-top: 14px;
+  color: #fff;
+  font: 600 clamp(10px, .8vw, 12px)/1.35 "DM Mono", monospace;
+  letter-spacing: .07em;
+}
+
+.case-product-gallery .product-shot figcaption p { margin: 0; }
+.case-product-gallery .product-shot figcaption span { color: var(--case-accent); }
+
+.product-scroll-status {
+  position: absolute;
+  z-index: 3;
+  right: clamp(22px, 4vw, 62px);
+  bottom: clamp(18px, 2.5vw, 34px);
+  left: clamp(22px, 4vw, 62px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  column-gap: clamp(38px, 7vw, 112px);
+  padding-top: clamp(18px, 2vw, 26px);
+  border-top: 1px solid rgba(255, 255, 255, .4);
+  color: #fff;
+  font: 600 9px/1.3 "DM Mono", monospace;
+  letter-spacing: .08em;
+}
+
+.product-scroll-status > span:first-child { align-self: center; white-space: nowrap; }
+.product-scroll-count { align-self: center; justify-self: end; color: var(--case-accent); }
+.product-scroll-controls { display: flex; gap: 8px; align-items: center; }
+
+.product-scroll-arrow {
+  display: grid;
+  width: 54px;
+  height: 44px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: 0;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.product-scroll-arrow .ui-arrow { display: inline-block; color: inherit; font-size: 18px !important; line-height: 1; }
+.product-scroll-arrow:hover:not(:disabled), .product-scroll-arrow:focus-visible:not(:disabled) { border-color: var(--case-accent); background: var(--case-accent); color: #000; outline: 0; }
+.product-scroll-arrow:disabled { opacity: .28; cursor: default; }
+
+:is(.product-scroll-next, .product-lightbox-next):hover:not(:disabled) .ui-arrow,
+:is(.product-scroll-next, .product-lightbox-next):focus-visible:not(:disabled) .ui-arrow { transform: translateX(5px); }
+:is(.product-scroll-prev, .product-lightbox-prev):hover:not(:disabled) .ui-arrow,
+:is(.product-scroll-prev, .product-lightbox-prev):focus-visible:not(:disabled) .ui-arrow { transform: translateX(-5px); }
+
+.product-lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: clamp(48px, 6vw, 84px) clamp(18px, 4vw, 60px) 24px;
+  border: 0;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.product-lightbox[open] { display: grid; place-items: center; }
+.product-lightbox::backdrop { background: #000; }
+.product-lightbox figure { display: grid; grid-template-rows: minmax(0, 1fr) auto; width: calc(100% - clamp(80px, 10vw, 160px)); height: 100%; margin: 0; }
+.product-lightbox img { place-self: center; max-width: 100%; max-height: calc(100dvh - 132px); object-fit: contain; }
+.product-lightbox figcaption { padding: 0; border: 0; font: 500 11px/1.4 "DM Mono", monospace; letter-spacing: .06em; }
+.product-lightbox-meta { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: clamp(18px, 3vw, 48px); align-items: center; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, .4); font: 500 10px/1.4 "DM Mono", monospace; letter-spacing: .06em; }
+.product-lightbox-counter { color: var(--case-accent); }
+.product-lightbox-hint { opacity: .55; }
+
+.product-lightbox-nav {
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  display: grid;
+  width: clamp(48px, 5vw, 68px);
+  height: clamp(48px, 5vw, 68px);
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, .7);
+  background: #000;
+  color: #fff;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.product-lightbox-nav:hover, .product-lightbox-nav:focus-visible,
+.product-lightbox-close:hover, .product-lightbox-close:focus-visible { border-color: var(--case-accent); background: var(--case-accent); color: #000; outline: 0; }
+.product-lightbox-prev { left: 18px; }
+.product-lightbox-next { right: 18px; }
+.product-lightbox-close { position: fixed; z-index: 2; top: 18px; right: 22px; width: 44px; height: 44px; padding: 0; border: 1px solid #fff; background: #000; color: #fff; font: 400 30px/1 "DM Sans", sans-serif; cursor: pointer; }
+body:has(.product-lightbox[open]) { overflow: hidden; }
+
+.workflow-page.unified-case-page .case-outcomes { background: var(--case-paper); }
+.workflow-page.unified-case-page .case-outcomes article.dark { background: #000; color: #fff; }
+.workflow-page.unified-case-page .case-outcomes :is(.case-label, h2, p) { max-width: 900px; margin-left: 0; margin-right: 0; }
+
+.workflow-page.unified-case-page .case-outcomes article > h2 {
+  max-width: 900px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  font-size: clamp(2rem, 3.7vw, 4.15rem);
+  line-height: .95;
+}
+
+.workflow-page.unified-case-page .case-outcomes article > p:not(.case-label) {
+  max-width: 590px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.workflow-page.unified-case-page :is(.workflow-content article, .chapter-copy, .project-snapshot > div, .case-outcomes article) > p + p {
+  margin-top: 18px;
+}
+
+@media (max-width: 700px) {
+  .case-product-gallery .product-scroll-sticky { --product-stage-height: 78svh; min-height: 500px; }
+  .case-product-gallery .product-mosaic,
+  .case-product-gallery .product-scroll.is-horizontal-ready .product-mosaic { gap: 30px; padding: 70px var(--product-edge, 22px) 82px; }
+  .case-product-gallery .product-shot { flex-basis: min(86vw, calc(var(--product-stage-height) - 40px)); width: min(86vw, calc(var(--product-stage-height) - 40px)); }
+  .product-scroll-status { grid-template-columns: auto minmax(0, 1fr); column-gap: 28px; padding-top: 15px; }
+  .product-scroll-status > span:first-child { display: none; }
+  .product-scroll-arrow { width: 50px; height: 42px; }
+  .product-lightbox { padding: 58px 12px 18px; }
+  .product-lightbox figure { width: 100%; }
+  .product-lightbox-nav { top: auto; bottom: 62px; transform: none; }
+  .product-lightbox-prev { left: 12px; }
+  .product-lightbox-next { right: 12px; }
+  .product-lightbox-meta { grid-template-columns: minmax(0, 1fr) auto; padding: 10px 62px 0; }
+  .product-lightbox-hint { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-product-gallery .product-scroll { height: auto !important; }
+  .case-product-gallery .product-scroll-sticky { position: relative; height: auto; min-height: 0; overflow-x: auto; scroll-snap-type: x mandatory; }
+  .case-product-gallery .product-mosaic { height: auto; transform: none !important; }
+  .case-product-gallery .product-shot { scroll-snap-align: center; transition: none; }
+}
+/* Chapters without an eyebrow start at the same section inset. */
+.workflow-page.unified-case-page .chapter-copy > h2:first-child {margin-top:0;}
