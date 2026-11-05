@@ -1,0 +1,116 @@
+:root{--page-gutter:13vw}
+html,body{overflow-x:hidden}
+::selection{background:#c7f000;color:#000}
+::-moz-selection{background:#c7f000;color:#000}
+.hero.hero-light{background:var(--paper);color:#000}
+body.hero-light:not(.hero-resolved) .nav{background:rgba(242,242,242,.94);color:#000;border-bottom-color:rgba(0,0,0,.1)}
+
+/* One editorial gutter shared by the primary page regions. */
+.nav{padding-left:var(--page-gutter)!important;padding-right:var(--page-gutter)!important}
+.menu-toggle,.menu-backdrop{display:none}
+.hero-copy{padding-left:var(--page-gutter)!important;padding-right:var(--page-gutter)!important;gap:clamp(38px,5.5vh,66px)}
+.section{padding-left:var(--page-gutter)!important;padding-right:var(--page-gutter)!important}
+.contact{padding-left:var(--page-gutter)!important;padding-right:var(--page-gutter)!important}
+.hero-bottom{left:var(--page-gutter)!important;right:var(--page-gutter)!important}
+.hero-copy>.hero-geo-row{position:static;inset:auto;width:100%;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:start;pointer-events:none}
+.hero-copy>.hero-geo-row .hero-tech-a{position:static!important;grid-column:1 / span 3;inset:auto!important;text-align:left;pointer-events:auto}
+.hero-copy>.morph-stack{margin:0}
+.hero-copy>.hero-intro{margin:0!important}
+.hero-intro .hero-role{width:14ch;max-width:14ch;white-space:normal}
+.hero-intro>p:last-child{width:42ch;max-width:100%;white-space:normal}
+.hero-statement span{display:block;white-space:nowrap}
+
+/* Compact, centered section-title bands. */
+.section-head.compact-title{display:flex!important;align-items:center!important;justify-content:center!important;min-height:0;padding:clamp(44px,4.8vw,72px) 0!important;margin-bottom:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.section-head.compact-title.inverse{border-color:rgba(255,255,255,.33)}
+.section-head.compact-title>h2{grid-column:auto;grid-row:auto;margin:0;font-size:clamp(3rem,5.5vw,6rem)!important;white-space:nowrap!important}
+.compact-title+.capabilities .capability:first-child,.compact-title+.case-index{border-top:0}
+.case-index .case{padding-top:15px}
+.case-index .case-market-analysis{border-bottom:0}
+.work+.about{padding-top:0!important}
+.about .compact-title+.about-grid{padding-top:clamp(42px,5vw,72px)}
+.capabilities-vertical .capability,.capabilities-vertical .capability.featured,.capabilities-vertical .capability:nth-child(even){grid-template-columns:72px minmax(0,1.62fr) minmax(250px,.68fr)!important;column-gap:clamp(28px,3.6vw,62px)}
+.capabilities-vertical .capability h3{grid-column:2}
+.capabilities-vertical .capability p{grid-column:3;margin-top:0;align-self:start}
+.capabilities-vertical .capability h3{font-size:clamp(2rem,3.7vw,4.15rem)!important;overflow:visible}
+.bring .geometry-landing{margin-top:0!important}
+
+/* Headings without counters retain the established grid rhythm. */
+.work-heading,.about-heading{grid-template-columns:5fr 2fr}
+.work-heading h2,.about-heading h2{grid-column:1}
+.work-heading .work-intro{grid-column:2}
+
+/* Selected Work: equal media and a strict text/media alternating cadence. */
+.case-heading{grid-template-columns:1fr auto;align-items:start}
+.case-heading>p{grid-column:1}
+.case-heading>b{grid-column:2}
+.case-split{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(42px,5vw,88px);align-items:center}
+.case-bank-ai .case-copy,.case-market-analysis .case-copy{order:1}
+.case-bank-ai .case-visual,.case-market-analysis .case-visual{order:2}
+.case-trading-experience .case-visual{order:1}
+.case-trading-experience .case-copy{order:2}
+.case-visual,.trading-platform-visual,.market-analysis-visual,.trading-placeholder-visual{width:100%;height:auto!important;aspect-ratio:4/3;border-radius:0;padding:clamp(24px,3vw,44px)}
+.case-visual.case-image{padding:0!important;background:#000;border:0}
+.case-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.case-trading-experience .case-image{background:#3e9349}
+.case-trading-experience .case-image img{object-fit:contain;object-position:center}
+.case-split>.case-copy{padding:clamp(30px,4vw,58px) 0}
+
+/* Footer supporting copy matches the header wordmark exactly. */
+.contact-bottom>div:first-child p{font-family:var(--sans)!important;font-size:14px!important;font-weight:500;line-height:1.35;letter-spacing:.01em;max-width:420px}
+.contact-bottom{align-items:flex-end!important}
+.contact-actions{gap:0}
+.contact-note{display:flex;align-items:baseline;gap:9px;white-space:nowrap;margin-top:1px!important}
+.contact-note a,.contact-note span{font-size:14px!important;line-height:1.25}
+.contact-bottom>div:first-child p{text-transform:uppercase;line-height:1}
+.contact-bottom>div:first-child .contact-location{margin-top:14px;font-size:14px!important;font-weight:400;line-height:1.25;letter-spacing:0;opacity:1}
+
+@media(max-width:900px){
+  :root{--page-gutter:7vw}
+  .case-split{gap:34px}
+  .about-grid{grid-template-columns:1fr!important;margin-left:0!important;gap:50px}
+}
+
+@media(max-width:700px){
+  :root{--page-gutter:22px}
+  .nav{grid-template-columns:1fr auto!important;z-index:40!important;mix-blend-mode:normal!important}
+  .nav .wordmark{position:relative;z-index:42}
+  .nav-meta{display:none!important}
+  .menu-toggle{position:relative;z-index:42;display:flex;width:42px;height:42px;margin:-10px -10px -10px 0;padding:0;border:0;background:transparent;color:currentColor;align-items:center;justify-content:center;flex-direction:column;gap:7px;cursor:pointer}
+  .menu-toggle span{display:block;width:22px;height:1px;background:currentColor;transition:transform .55s cubic-bezier(.22,1,.36,1),opacity .35s ease}
+  .nav.menu-open .menu-toggle span:first-child{transform:translateY(4px) rotate(45deg)}
+  .nav.menu-open .menu-toggle span:last-child{transform:translateY(-4px) rotate(-45deg)}
+  .nav nav{position:fixed!important;z-index:41;inset:0;width:100vw;height:100svh;padding:clamp(120px,20vh,180px) var(--page-gutter) 48px;display:flex!important;flex-direction:column;align-items:flex-start;justify-content:flex-start!important;gap:8px!important;background:var(--paper);color:#000;transform:translateX(-102%);visibility:hidden;transition:transform .75s cubic-bezier(.22,1,.36,1),visibility 0s linear .75s}
+  .nav nav a{width:100%;padding:12px 0;border:0!important;font-size:clamp(2.8rem,13vw,5rem)!important;font-weight:700;line-height:.88!important;letter-spacing:-.07em;opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .65s cubic-bezier(.22,1,.36,1)}
+  .nav.menu-open nav{transform:translateX(0);visibility:visible;transition-delay:0s}
+  .nav.menu-open nav a{opacity:1;transform:translateY(0)}
+  .nav.menu-open nav a:nth-child(1){transition-delay:.12s}
+  .nav.menu-open nav a:nth-child(2){transition-delay:.18s}
+  .nav.menu-open nav a:nth-child(3){transition-delay:.24s}
+  .menu-backdrop{position:fixed;z-index:40;inset:0;display:block;border:0;background:rgba(0,0,0,.46);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .55s ease,visibility 0s linear .55s}
+  .nav.menu-open .menu-backdrop{opacity:1;visibility:visible;pointer-events:auto;transition-delay:0s}
+  .nav.menu-open,.nav.menu-open .wordmark,.nav.menu-open .menu-toggle{color:#000!important}
+  body.menu-open{overflow:hidden}
+  .work-heading,.about-heading{grid-template-columns:1fr}
+  .hero-copy{gap:32px}
+  .hero-copy>.hero-geo-row .hero-tech-a{grid-column:1 / span 6}
+  .hero-intro .hero-role{width:auto;max-width:none;white-space:nowrap}
+  .hero-intro>p:last-child{width:40ch;max-width:100%}
+  .hero-statement{width:100%!important}
+  .hero-statement span{white-space:normal}
+  .section-head.compact-title{padding:36px 0!important;margin-bottom:0}
+  .section-head.compact-title>h2{font-size:clamp(2.45rem,10vw,3.5rem)!important;white-space:normal!important}
+  .capabilities-vertical .capability,.capabilities-vertical .capability.featured,.capabilities-vertical .capability:nth-child(even){grid-template-columns:1fr!important;row-gap:18px}
+  .capabilities-vertical .capability h3,.capabilities-vertical .capability p{grid-column:1}
+  .work-heading h2,.work-heading .work-intro,.about-heading h2{grid-column:1}
+  .case-heading{grid-template-columns:1fr;gap:7px}
+  .case-heading>b{grid-column:1;text-align:left}
+  .case-split{grid-template-columns:1fr;gap:20px}
+  .case.case .case-visual{order:1}
+  .case.case .case-copy{order:2}
+  .case-visual,.trading-platform-visual,.market-analysis-visual,.trading-placeholder-visual{aspect-ratio:4/3;padding:22px}
+  .contact-bottom{gap:18px}
+  .contact-note{flex-wrap:wrap;gap:6px 8px;white-space:normal}
+  .contact-bottom{flex-direction:column;align-items:flex-start!important}
+  .contact-actions{width:100%}
+}

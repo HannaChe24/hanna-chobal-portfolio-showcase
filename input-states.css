@@ -1,0 +1,95 @@
+/* Shared form states, including browser autofill, on pages and embedded demos. */
+:root {
+  --field-accent: var(--action-green, #49a85d);
+  --field-focus-fill: rgba(73, 168, 93, .5);
+  --field-surface: #f2f2f2;
+  --field-text: #000;
+}
+
+.gate-page {
+  --field-surface: #000;
+  --field-text: #fff;
+}
+
+.gate-page .password-row {
+  --field-focus-width: 1px;
+  --field-focus-offset: -1px;
+}
+
+dialog[data-modal] {
+  --field-surface: #f2f2f2;
+  --field-text: #000;
+}
+
+.task-prototype {
+  --field-surface: var(--tp-surface);
+  --field-text: var(--tp-text);
+}
+
+/* Portfolio pages opt in; embedded and standalone prototypes keep their own states. */
+html body[data-site-ui] :is(input, textarea, select):not(:where(.task-prototype *, #mobile-trading-demo *)) {
+  --field-focus-width: 1px;
+  --field-focus-offset: -1px;
+}
+
+@media (hover: hover) {
+  html body[data-site-ui] :is(
+    input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]),
+    textarea,
+    select
+  ):not(:where(.task-prototype *, #mobile-trading-demo *)):not(:disabled):not([readonly]):hover {
+    background-color: var(--field-focus-fill) !important;
+    outline: var(--field-focus-width) solid var(--field-accent) !important;
+    outline-offset: var(--field-focus-offset) !important;
+  }
+
+  html body[data-site-ui] input:is(:autofill, :-webkit-autofill):not(:where(.task-prototype *, #mobile-trading-demo *)):not(:disabled):not([readonly]):hover {
+    box-shadow: 0 0 0 1000px color-mix(in srgb, var(--field-accent) 50%, var(--field-surface)) inset !important;
+  }
+}
+
+/* Exclude controls whose fill communicates checked, selected or disabled state. */
+html body :is(
+  input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]),
+  textarea,
+  select
+):not(:where(#mobile-trading-demo *)):not(:disabled):not([readonly]):focus {
+  background-color: var(--field-focus-fill) !important;
+  outline: var(--field-focus-width, 2px) solid var(--field-accent) !important;
+  outline-offset: var(--field-focus-offset, 2px) !important;
+  caret-color: var(--field-text);
+}
+
+/* An opaque composite covers the browser's blue/yellow autofill paint. */
+html body input:is(:autofill, :-webkit-autofill):not(:where(#mobile-trading-demo *)) {
+  -webkit-text-fill-color: var(--field-text) !important;
+  box-shadow: 0 0 0 1000px var(--field-surface) inset !important;
+}
+
+html body input:is(:autofill, :-webkit-autofill):not(:where(#mobile-trading-demo *)):not(:disabled):not([readonly]):focus {
+  box-shadow: 0 0 0 1000px color-mix(in srgb, var(--field-accent) 50%, var(--field-surface)) inset !important;
+}
+
+html body input:is([type="checkbox"], [type="radio"], [type="range"]):not(:where(#mobile-trading-demo *)) {
+  accent-color: var(--field-accent);
+}
+
+html body input:is([type="checkbox"], [type="radio"], [type="range"], [type="file"], [type="color"]):not(:where(#mobile-trading-demo *)):focus-visible {
+  outline: var(--field-focus-width, 2px) solid var(--field-accent) !important;
+  outline-offset: var(--field-focus-offset, 2px) !important;
+}
+
+@media (forced-colors: active) {
+  html body[data-site-ui] :is(input, textarea, select):not(:where(.task-prototype *, #mobile-trading-demo *)):hover {
+    background-color: Canvas !important;
+    outline-color: Highlight !important;
+  }
+  html body :is(input, textarea, select):focus {
+    background-color: Canvas !important;
+    outline-color: Highlight !important;
+  }
+  html body input:is(:autofill, :-webkit-autofill):not(:where(#mobile-trading-demo *)) {
+    -webkit-text-fill-color: CanvasText !important;
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,4 @@
+.bring .section-head h2{line-height:1.28}
+@media(max-width:700px){.bring .section-head h2{line-height:1.2}}
+.case-index{counter-reset:case}.case-heading>span{font-size:0}.case-heading>span::before{counter-increment:case;content:counter(case,decimal-leading-zero);font:10px var(--mono);font-size:10px}
+.nav{grid-template-columns:1fr auto 1fr}

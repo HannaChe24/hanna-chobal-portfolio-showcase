@@ -1,0 +1,99 @@
+/* Native cursor and interaction rules shared by every route. */
+html,
+body {
+  cursor: default;
+}
+
+:where(
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  dt,
+  dd,
+  blockquote,
+  figcaption,
+  input:not([type]),
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  textarea
+) {
+  cursor: text;
+}
+
+:where(
+  a[href],
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary,
+  select,
+  input[type="button"]:not(:disabled),
+  input[type="submit"]:not(:disabled),
+  input[type="reset"]:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled)
+),
+:where(
+  a[href],
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary
+) * {
+  cursor: pointer;
+}
+
+:where(
+  button:disabled,
+  input:disabled,
+  select:disabled,
+  [aria-disabled="true"]
+),
+:where(
+  button:disabled,
+  [aria-disabled="true"]
+) * {
+  cursor: not-allowed;
+}
+
+/* Bucharest is location metadata, not a control. */
+.contact-location,
+.contact-location * {
+  color: inherit;
+  cursor: text;
+  transition: none;
+}
+
+.contact-location:hover,
+.contact-location:focus {
+  color: inherit;
+  opacity: 1;
+  transform: none;
+  text-decoration: none;
+}
+
+/* Static process rows must not imply that they can be clicked. */
+.process-step:not(.active):hover {
+  opacity: .3;
+}
+
+:where(a[href], button, [role="button"], summary, select, input):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+@media (hover: none) {
+  .case-link:hover .case-visual,
+  .case-link:hover .case-copy h3,
+  .project-link:hover .project-info h3,
+  .project-link:hover .case-arrow {
+    transform: none;
+  }
+}

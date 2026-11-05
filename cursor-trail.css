@@ -1,0 +1,60 @@
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .has-cursor-trail,
+  .has-cursor-trail * {
+    cursor: none !important;
+  }
+
+  .cursor-trail {
+    position: fixed;
+    z-index: 2147483647;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .18s ease;
+    mix-blend-mode: difference;
+  }
+
+  .cursor-trail.is-visible { opacity: 1; }
+
+  .cursor-ring,
+  .cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50%;
+    background: #fff;
+    will-change: transform;
+  }
+
+  .cursor-ring {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    background: transparent;
+    transition: width .2s ease, height .2s ease, background .2s ease, border-width .2s ease;
+  }
+
+  .cursor-dot {
+    width: 4px;
+    height: 4px;
+    opacity: calc(.95 - var(--dot-index) * .075);
+    transform-origin: center;
+  }
+
+  .cursor-trail.is-link .cursor-ring {
+    width: 42px;
+    height: 42px;
+    border-width: 0;
+    background: #fff;
+  }
+
+  .cursor-trail.is-pressed .cursor-ring {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .cursor-trail { display: none; }
+}

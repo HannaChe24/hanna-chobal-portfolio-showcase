@@ -1,0 +1,30 @@
+/* Selected Work card interactions. */
+.case-index .case { position: relative; cursor: pointer; }
+.case-index .case :is(h3,p,img,b) { cursor: pointer; }
+.case-index .case-cta { position: relative; z-index: 2; }
+.case-index .case-visual { transition: transform .35s ease; }
+.case-index .case:hover .case-visual { transform: translateY(-4px); }
+.case-hover-invite { position: fixed; left: 0; top: 0; z-index: 1000; pointer-events: none; padding: 11px 15px; background: var(--site-action-green, #49a85d); color: #fff; border: 1px solid #111; border-radius: 0; font: 500 13px/1.2 "DM Sans",Arial,sans-serif; opacity: 0; transition: opacity .15s ease; white-space: nowrap; box-shadow: 0 5px 20px #0002; }
+.case-hover-invite.is-visible { opacity: 1; }
+@media (hover:none), (pointer:coarse) { .case-hover-invite { display: none; } }
+@media (prefers-reduced-motion:reduce) { .case-index .case-visual, .case-hover-invite { transition:none; } }
+
+/* The pill replaces the ring; the existing trailing dots follow its centre. */
+@media (hover:hover) and (pointer:fine) {
+  body.has-case-invite .case-index .case,
+  body.has-case-invite .case-index .case *,
+  body.has-case-invite [data-hover-invite],
+  body.has-case-invite [data-hover-invite] * { cursor: none !important; }
+  body.has-case-invite .cursor-ring { opacity: 0; }
+  .case-hover-invite { z-index: 2147483647; }
+}
+
+/* Keep the cursor trail behind the opaque invitation. */
+body.has-case-invite .cursor-trail { z-index: 2147483646; }
+
+.case-hover-invite .case-invite-arrow { color: #fff; }
+
+/* Image preview feedback sits on the image edge, without an outer gap. */
+html body a[data-hover-invite]:has(> img) { padding: 0; outline: none !important; }
+html body a[data-hover-invite] > img { display: block; box-sizing: border-box; border: 1px solid rgba(128,128,128,.35); }
+html body a[data-hover-invite]:is(:hover, :focus-visible) > img { border-color: #49a85d; outline: 2px solid #49a85d; outline-offset: -2px; }

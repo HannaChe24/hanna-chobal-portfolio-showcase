@@ -1,0 +1,202 @@
+@import url("fonts.css?v=20261013-local-fonts");
+
+:root {
+  --global-gutter: 13vw;
+  --global-header-height: 48px;
+  --global-paper: #f2f2f2;
+  --global-line: rgba(0, 0, 0, .1);
+  --global-ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+.global-header {
+  position: fixed;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--global-header-height);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 var(--global-gutter) !important;
+  border-bottom: 1px solid rgba(128, 128, 128, .45) !important;
+  background: rgba(242, 242, 242, .68) !important;
+  box-shadow: none;
+  color: #000 !important;
+  mix-blend-mode: normal;
+  backdrop-filter: blur(22px) saturate(145%);
+  -webkit-backdrop-filter: blur(22px) saturate(145%);
+  font: 400 14px/1 "DM Sans", Arial, sans-serif !important;
+  letter-spacing: 0 !important;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .global-header { background: rgba(242, 242, 242, .96) !important; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .global-header { background: #f2f2f2 !important; backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+
+.global-header .wordmark {
+  position: relative;
+  z-index: 42;
+  justify-self: start;
+  font: 500 14px/1 "DM Sans", Arial, sans-serif !important;
+  letter-spacing: 0 !important;
+}
+
+.global-header .nav-meta {
+  justify-self: center;
+  margin: 0;
+  font: 400 14px/1 "DM Sans", Arial, sans-serif !important;
+  letter-spacing: 0 !important;
+  cursor: text;
+}
+
+.global-header nav {
+  justify-self: end;
+  display: flex;
+  gap: 22px;
+}
+
+.global-header nav a {
+  padding: 5px 0;
+  border-bottom: 1px solid transparent;
+  font: 400 14px/1 "DM Sans", Arial, sans-serif !important;
+  letter-spacing: 0 !important;
+  transition: border-color .22s ease;
+}
+
+.global-header nav a:hover,
+.global-header nav a:focus-visible {
+  border-color: currentColor;
+}
+
+.global-header .menu-toggle,
+.global-header .menu-backdrop {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  :root { --global-gutter: 7vw; }
+}
+
+@media (max-width: 700px) {
+  :root { --global-gutter: 22px; --global-header-height: 43px; }
+  .global-header { grid-template-columns: 1fr auto; }
+  .global-header .nav-meta { display: none; }
+  .global-header .menu-toggle {
+    position: relative;
+    z-index: 42;
+    display: flex;
+    width: 42px;
+    height: 42px;
+    margin: -10px -10px -10px 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: currentColor;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .global-header .menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 1px;
+    background: currentColor;
+    transition: transform .55s var(--global-ease), opacity .35s ease;
+  }
+  .global-header.menu-open .menu-toggle span:first-child { transform: translateY(4px) rotate(45deg); }
+  .global-header.menu-open .menu-toggle span:last-child { transform: translateY(-4px) rotate(-45deg); }
+  .global-header nav {
+    position: fixed !important;
+    z-index: 41;
+    inset: 0;
+    width: 100vw;
+    height: 100svh;
+    padding: clamp(120px, 20vh, 180px) var(--global-gutter) 48px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    background: var(--global-paper);
+    color: #000;
+    transform: translateX(-102%);
+    visibility: hidden;
+    transition: transform .75s var(--global-ease), visibility 0s linear .75s;
+  }
+  .global-header nav a {
+    width: 100%;
+    padding: 12px 0;
+    border: 0 !important;
+    font: 700 clamp(2.8rem, 13vw, 5rem)/.88 "DM Sans", sans-serif;
+    letter-spacing: -.07em;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .5s ease, transform .65s var(--global-ease);
+  }
+  .global-header.menu-open nav { transform: translateX(0); visibility: visible; transition-delay: 0s; }
+  .global-header.menu-open nav a { opacity: 1; transform: translateY(0); }
+  .global-header.menu-open nav a:nth-child(1) { transition-delay: .12s; }
+  .global-header.menu-open nav a:nth-child(2) { transition-delay: .18s; }
+  .global-header.menu-open nav a:nth-child(3) { transition-delay: .24s; }
+  .global-header.menu-open nav a:hover,
+  .global-header.menu-open nav a:focus-visible {
+    color: #000;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+  }
+  .global-header.menu-open nav a:focus-visible {
+    outline: 1px solid #49a85d;
+    outline-offset: 2px;
+  }
+  .global-header .menu-backdrop {
+    position: fixed;
+    z-index: 40;
+    inset: 0;
+    display: block;
+    border: 0;
+    background: rgba(0, 0, 0, .46);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .55s ease, visibility 0s linear .55s;
+  }
+  .global-header.menu-open .menu-backdrop { opacity: 1; visibility: visible; pointer-events: auto; transition-delay: 0s; }
+  body.menu-open { overflow: hidden; }
+}
+
+@media (max-width: 700px) and (prefers-reduced-motion: reduce) {
+  .global-header nav,
+  .global-header nav a,
+  .global-header .menu-toggle span { transition-duration: .01ms !important; transition-delay: 0s !important; }
+}
+
+/* A soft, progressive transition from the glass header into the page. */
+.header-progressive-blur {
+  position:fixed;
+  top:var(--global-header-height);
+  left:0;
+  right:0;
+  height:28px;
+  z-index:39;
+  pointer-events:none;
+}
+.header-progressive-blur > i {
+  position:absolute;
+  inset:0;
+  backdrop-filter:blur(var(--header-blur));
+  -webkit-backdrop-filter:blur(var(--header-blur));
+  mask-image:linear-gradient(to bottom,#000 0%,transparent var(--header-fade));
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,transparent var(--header-fade));
+}
+.header-progressive-blur > i:nth-child(1){--header-blur:8px;--header-fade:32%}
+.header-progressive-blur > i:nth-child(2){--header-blur:4px;--header-fade:52%}
+.header-progressive-blur > i:nth-child(3){--header-blur:2px;--header-fade:76%}
+.header-progressive-blur > i:nth-child(4){--header-blur:1px;--header-fade:100%}
+@media(max-width:700px){.header-progressive-blur{height:24px}}
+@media print,(prefers-reduced-transparency:reduce){.header-progressive-blur{display:none}}

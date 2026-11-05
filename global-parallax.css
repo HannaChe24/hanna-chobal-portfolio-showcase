@@ -1,0 +1,19 @@
+/* The geometry falls through Hero + What I Bring and settles at the Selected Work boundary. */
+.hero-copy,.hero-tech,.hero-bottom{z-index:4!important}
+.bring::before,.bring::after,.work::before,.work::after,.process::before,.process::after,.approach::before,.approach::after,.about::before,.about::after,.contact::before,.contact::after{content:none!important;display:none!important}
+.scroll-geometry{position:absolute;top:0;left:0;right:0;height:var(--geometry-end,200vh);z-index:3;overflow:hidden;pointer-events:none;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility 0s linear .45s}
+.scroll-geometry.is-active{opacity:var(--geometry-opacity,1);visibility:visible;transition-delay:0s}
+.scroll-geometry i{position:absolute;display:block;will-change:transform,filter,opacity;transform:translate3d(var(--geo-x,0px),var(--geo-y,0px),0) scale(var(--geo-scale,1));filter:blur(var(--geo-blur,0px));opacity:var(--geo-opacity,1)}
+.geo-orbit{width:clamp(155px,20vw,310px);aspect-ratio:1;border-radius:50%;border:clamp(25px,3.7vw,58px) solid #C7F000;left:auto;right:-6vw;top:18vh}
+.geo-triangle{width:clamp(90px,11vw,180px);aspect-ratio:1;background:#7867ff;clip-path:polygon(50% 0,100% 100%,0 100%);right:8%;top:13vh;transform:translate3d(var(--geo-x,0px),var(--geo-y,0px),0) scale(var(--geo-scale,1)) rotate(19deg)!important}
+.geo-sun{width:clamp(58px,7vw,112px);aspect-ratio:1;background:#f4c74e;clip-path:polygon(50% 0%,61% 29%,79% 8%,78% 38%,100% 29%,82% 50%,100% 71%,78% 62%,79% 92%,61% 71%,50% 100%,39% 71%,21% 92%,22% 62%,0 71%,18% 50%,0 29%,22% 38%,21% 8%,39% 29%);left:38%;top:43vh}
+.geo-band{width:clamp(260px,36vw,600px);height:clamp(42px,5vw,86px);background:#7867ff;right:-10vw;top:68vh;transform:translate3d(var(--geo-x,0px),var(--geo-y,0px),0) scale(var(--geo-scale,1)) rotate(-17deg)!important}
+.geo-dot{width:clamp(42px,5vw,82px);aspect-ratio:1;border-radius:50%;background:#C7F000;right:26%;top:78vh;box-shadow:0 0 0 11px rgba(199,240,0,.16)}
+.geo-orbit.geo-drop-6{width:clamp(280px,38vw,620px);left:18%;right:auto;top:7vh;border-width:clamp(38px,5.5vw,86px);opacity:.82}
+.geo-triangle.geo-drop-7{width:clamp(170px,24vw,390px);right:-4%;top:34vh;background:#ff8079}
+.geo-sun.geo-drop-8{width:clamp(120px,16vw,260px);left:64%;top:5vh;background:#C7F000}
+.geo-band.geo-drop-9{width:clamp(420px,58vw,880px);height:clamp(68px,9vw,145px);right:18%;top:53vh;background:#f4c74e}
+.geo-dot.geo-drop-10{width:clamp(95px,13vw,210px);right:4%;top:72vh;background:#7867ff;box-shadow:0 0 0 18px rgba(120,103,255,.15)}
+.bring>*,.work>*,.process>*,.approach>*,.about>*,.contact>*{z-index:4!important}
+@media(max-width:700px){.geo-orbit{left:-16vw}.geo-triangle{right:-3vw}.geo-band{width:270px;right:-32vw}.geo-dot{right:17%}}
+@media(prefers-reduced-motion:reduce){.scroll-geometry{display:none}}

@@ -1,0 +1,474 @@
+:root {
+  --site-action-green: #49a85d;
+  --action-green: var(--site-action-green);
+  --action-transition: .22s cubic-bezier(.22, 1, .36, 1);
+}
+
+:where(button, .contact-dialog-action, .surface-action) {
+  transition: color var(--action-transition), background-color var(--action-transition), border-color var(--action-transition), opacity var(--action-transition), transform var(--action-transition);
+}
+
+/* Selected Work uses the same editorial text-button treatment as other links. */
+.case-cta {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  width: fit-content;
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--action-transition);
+}
+
+.case-cta:hover,
+.case-cta:focus-visible {
+  color: var(--action-green);
+}
+
+.case-cta .text-button-label,
+.request-access .text-button-label,
+.external-product-link .text-button-label {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 7px;
+  transition: text-decoration-color var(--action-transition);
+}
+
+.case-cta:hover .text-button-label,
+.case-cta:focus-visible .text-button-label,
+.request-access:hover .text-button-label,
+.request-access:focus-visible .text-button-label,
+.external-product-link:hover .text-button-label,
+.external-product-link:focus-visible .text-button-label {
+  text-decoration-color: var(--action-green);
+}
+
+/* Footer contact details form one compact, consistently interactive line. */
+.contact-meta-line {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0;
+  font: 400 14px/1.35 "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+.contact-meta-line a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  transition: color var(--action-transition), text-decoration-color var(--action-transition);
+}
+
+.contact-separator {
+  margin: 0 10px;
+  opacity: .7;
+}
+
+.copy-icon {
+  display: inline-block;
+  font: 400 1.05em/1 "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  text-decoration: none !important;
+  transform: none;
+  transition: color var(--action-transition), transform var(--action-transition);
+}
+
+.contact-meta-line a:hover,
+.contact-meta-line a:focus-visible {
+  color: var(--action-green);
+}
+
+.contact-meta-line a:hover,
+.contact-meta-line a:focus-visible {
+  text-decoration-color: var(--action-green);
+}
+
+.contact-dialog-action:hover .copy-icon,
+.contact-dialog-action:focus-visible .copy-icon,
+.modal-action:hover .copy-icon,
+.modal-action:focus-visible .copy-icon {
+  transform: translateX(5px);
+}
+
+.contact-dialog-action.is-copied .copy-icon {
+  transform: none;
+}
+
+/* Request access is a text button: no persistent line, feedback only on interaction. */
+.request-access {
+  border-bottom-color: transparent !important;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  text-decoration: none;
+  transition: color var(--action-transition), border-color var(--action-transition);
+}
+
+.request-access:hover,
+.request-access:focus-visible {
+  border-bottom-color: transparent !important;
+}
+
+.gate-back {
+  display: inline-flex !important;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.gate-back:hover .gate-back-arrow,
+.gate-back:focus-visible .gate-back-arrow {
+  transform: translateX(-5px) !important;
+}
+
+/* External product links use the same text-button state and the shared ↗ icon. */
+.external-product-link {
+  border-bottom-color: transparent !important;
+  color: inherit;
+  text-decoration: none;
+}
+
+.external-product-link:hover,
+.external-product-link:focus-visible {
+  border-bottom-color: transparent !important;
+  color: var(--action-green) !important;
+}
+
+.ui-arrow {
+  display: inline-block;
+  font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif !important;
+  font-variant-emoji: text;
+  font-weight: 400 !important;
+  font-style: normal;
+  text-decoration: none !important;
+  transform: none;
+  transition: color var(--action-transition), transform var(--action-transition);
+}
+
+/* Compact text actions share the Selected Work / VIEW CASE STUDY pattern. */
+.case-cta,
+.external-product-link,
+.workflow-page .external-product-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px !important;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0 !important;
+}
+
+.contact-cta-button {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 16px;
+  font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(2.5rem, 7vw, 7rem) !important;
+  font-weight: 700;
+  line-height: .88;
+  letter-spacing: 1px !important;
+}
+
+.workflow-page .external-product-link {
+  font-size: 16.5px !important;
+}
+
+a.case-cta {
+  font-size: 16px !important;
+  gap: 6.4px;
+}
+
+.case-cta .text-button-label,
+.external-product-link .text-button-label,
+.contact-cta-button .text-button-label {
+  font: inherit;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  transition: color var(--action-transition), text-decoration-color var(--action-transition);
+}
+
+.case-cta .ui-arrow,
+.external-product-link .ui-arrow {
+  font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1;
+  font-weight: 400 !important;
+  transform-origin: left bottom;
+  transition: color var(--action-transition), transform var(--action-transition);
+}
+
+.contact-cta-button .ui-arrow {
+  font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: clamp(2rem, 4vw, 4rem) !important;
+  line-height: 1;
+  font-weight: 400 !important;
+  transform-origin: left center;
+  transform: none;
+  transition: color var(--action-transition), transform var(--action-transition);
+}
+
+.contact-cta-button .text-button-label {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+}
+
+.case-cta:hover .text-button-label,
+.case-cta:focus-visible .text-button-label,
+.external-product-link:hover .text-button-label,
+.external-product-link:focus-visible .text-button-label,
+.contact-cta-button:hover .text-button-label,
+.contact-cta-button:focus-visible .text-button-label {
+  text-decoration-color: var(--action-green);
+}
+
+:where(
+  .case-cta,
+  .external-product-link,
+  .contact-cta-button,
+  .case-navigation a,
+  .request-access,
+  .contact-dialog-action,
+  .modal-action,
+  .password-row button
+):hover .ui-arrow,
+:where(
+  .case-cta,
+  .external-product-link,
+  .contact-cta-button,
+  .case-navigation a,
+  .request-access,
+  .contact-dialog-action,
+  .modal-action,
+  .password-row button
+):focus-visible .ui-arrow {
+  transform: translateX(5px) !important;
+}
+
+.contact .contact-bottom {
+  display: grid;
+  grid-template-columns: minmax(480px, 1fr) auto;
+  align-items: center !important;
+  column-gap: clamp(40px, 5vw, 96px);
+  padding-top: clamp(68px, 5vw, 92px);
+  border-top: 1px solid rgba(255, 255, 255, .4);
+}
+
+.contact {
+  min-height: 0 !important;
+  padding: clamp(42px, 3vw, 56px) clamp(32px, 3.75vw, 72px) clamp(68px, 5vw, 92px) !important;
+  display: block !important;
+}
+
+.contact .contact-copy {
+  display: contents;
+}
+
+.contact .contact-bottom > .contact-copy > p {
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 780px;
+  margin: 0;
+  font: 400 clamp(1.35rem, 1.7vw, 2rem)/1.27 "DM Sans", "Helvetica Neue", Arial, sans-serif !important;
+  letter-spacing: 0 !important;
+}
+
+.contact .contact-actions {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: end;
+  justify-self: end;
+}
+
+.contact .contact-meta-line {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+  margin-top: clamp(38px, 3vw, 52px);
+  font: 400 14px/1.35 "DM Sans", "Helvetica Neue", Arial, sans-serif !important;
+  letter-spacing: .02em !important;
+}
+
+.contact .contact-meta-line :where(
+  .contact-location,
+  a,
+  .contact-separator
+) {
+  font: inherit !important;
+  letter-spacing: inherit !important;
+  line-height: inherit !important;
+}
+
+.contact .contact-cta-button {
+  gap: clamp(18px, 2vw, 34px);
+  font-size: clamp(3.6rem, 5.15vw, 6.4rem) !important;
+  white-space: nowrap;
+}
+
+.contact .contact-cta-button .ui-arrow {
+  font-size: clamp(2.5rem, 3.2vw, 4rem) !important;
+}
+
+@media (max-width: 1050px) {
+  .contact .contact-bottom {
+    grid-template-columns: 1fr;
+    align-items: start !important;
+    gap: 48px;
+  }
+
+  .contact .contact-actions {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: flex-start;
+    justify-self: start;
+  }
+
+  .contact .contact-meta-line {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact {
+    padding: 32px 16px 48px !important;
+  }
+
+  .contact .contact-bottom {
+    padding-top: 48px;
+    gap: 42px;
+  }
+
+  .contact .contact-bottom > .contact-copy > p {
+    font-size: 1.25rem !important;
+  }
+
+  .contact-meta-line {
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .contact .contact-cta-button {
+    font-size: clamp(2.5rem, 12vw, 4rem) !important;
+  }
+
+  .contact-separator {
+    margin: 0 5px;
+  }
+
+}
+
+/* Next Case Study is one large text button: label and arrow respond together. */
+.case-navigation strong {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+  transition: color var(--action-transition), text-decoration-color var(--action-transition);
+}
+
+.case-navigation b {
+  transform-origin: left bottom;
+  transition: color var(--action-transition), transform var(--action-transition);
+}
+
+.case-navigation a:hover strong,
+.case-navigation a:focus-visible strong {
+  color: var(--action-green);
+  text-decoration-color: var(--action-green);
+}
+
+.case-navigation a:hover b,
+.case-navigation a:focus-visible b {
+  color: var(--action-green);
+  transform: translateX(5px) !important;
+}
+
+/* Primary actions on light surfaces remain black-on-light until interaction. */
+:where(.contact-dialog-action, .request-submit:not(:disabled)) {
+  color: #000;
+}
+
+:where(.password-row button, .request-submit:not(:disabled), .request-dialog-head button, .contact-dialog-action, .contact-dialog-close, .surface-action):hover,
+:where(.password-row button, .request-submit:not(:disabled), .request-dialog-head button, .contact-dialog-action, .contact-dialog-close, .surface-action):focus-visible {
+  border-color: var(--action-green) !important;
+  background: var(--action-green) !important;
+  color: #000 !important;
+}
+
+/* Modal controls use a deliberately restrained icon nudge. */
+dialog :is(button, a) :is(.ui-arrow, .copy-icon) {
+  transition: color .32s cubic-bezier(.22, .8, .2, 1), transform .32s cubic-bezier(.22, .8, .2, 1) !important;
+}
+
+dialog :is(button, a):is(:hover, :focus-visible):not(:disabled) :is(.ui-arrow, .copy-icon) {
+  transform: translateX(2px) !important;
+}
+
+dialog :is(.product-lightbox-prev):is(:hover, :focus-visible):not(:disabled) .ui-arrow {
+  transform: translateX(-2px) !important;
+}
+
+:where(.request-access, .contact-cta-button):hover,
+:where(.request-access, .contact-cta-button):focus-visible {
+  border-color: var(--action-green) !important;
+  background: transparent !important;
+  color: var(--action-green) !important;
+}
+
+.global-header .menu-toggle:hover,
+.global-header .menu-toggle:focus-visible {
+  background: transparent !important;
+  color: #000 !important;
+}
+
+.global-header .menu-toggle:hover span,
+.global-header .menu-toggle:focus-visible span {
+  background: #000 !important;
+}
+
+:where(button:disabled, [aria-disabled="true"]),
+:where(button:disabled, [aria-disabled="true"]):hover,
+:where(button:disabled, [aria-disabled="true"]):focus-visible {
+  transform: none;
+}
+
+.contact-dialog-action.is-copied {
+  border-color: var(--action-green) !important;
+  background: var(--action-green) !important;
+  color: #000 !important;
+}
+
+/* Static control shown only inside the case-study mockup. */
+.mock-main .mock-action {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 13px;
+  border: 0;
+  background: var(--action-green);
+  color: #061008;
+  font: 9px "DM Mono", monospace;
+  cursor: default;
+}
+
+/* Bordered surface actions share the modal action fill, without link underlines. */
+.surface-action .text-button-label,
+.surface-action:is(:hover, :focus-visible) .text-button-label {
+  text-decoration: none;
+}
+.surface-action .ui-arrow {
+  transition: color .32s cubic-bezier(.22, .8, .2, 1), transform .32s cubic-bezier(.22, .8, .2, 1) !important;
+}
+.surface-action:is(:hover, :focus-visible) .ui-arrow {
+  transform: translateX(2px) !important;
+}
+
+.case-cta .ui-arrow { font-size: 14.4px !important; }

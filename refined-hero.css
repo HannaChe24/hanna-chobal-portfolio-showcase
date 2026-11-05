@@ -1,0 +1,47 @@
+/* Refined hero: typography and empty space carry the visual identity. */
+.hero{min-height:720px}.hero-grid{background-image:linear-gradient(to right,rgba(0,0,0,.055) 1px,transparent 1px);background-size:calc((100vw - 56px)/12) 100%;mask-image:linear-gradient(to bottom,transparent 27%,rgba(0,0,0,.42) 45%,rgba(0,0,0,.42) 70%,transparent 84%)}.hero-copy{padding:94px 6.5vw 105px;justify-content:center}.eyebrow{margin-bottom:clamp(34px,5.5vh,72px);letter-spacing:.08em}.morph-stack{line-height:.91;letter-spacing:.012em;max-width:1000px}.morph-word{font-size:clamp(3.2rem,8.1vw,8.8rem);font-weight:700;letter-spacing:.012em}.morph-word:nth-child(2){padding-left:6.1vw}.morph-word:nth-child(3){padding-left:12.2vw}.morph-word.long{font-size:clamp(1.45rem,3.35vw,3.85rem);line-height:.95;letter-spacing:.02em;padding-left:24.4vw;margin-top:clamp(26px,4vh,54px)}.morph-word.experiences{padding-left:24.4vw;margin-top:.08em}.hero-intro{margin:clamp(45px,7vh,80px) 0 0 24.4vw;grid-template-columns:145px 330px;gap:26px;font-size:15px;line-height:1.42}.hero-tech{font-size:8px;letter-spacing:.05em;opacity:0}.resolved .hero-tech{opacity:.34}.hero-tech-a{top:30%;right:6.5vw}.hero-tech-b{top:auto;bottom:18%;left:6.5vw}.hero-bottom{left:6.5vw;right:6.5vw}.hero.resolved canvas{opacity:.28;transition:opacity 0.8064s ease}.nav{padding-left:6.5vw;padding-right:6.5vw}.nav-meta{opacity:.62}.live-dot{width:5px;height:5px}@media(max-width:700px){.hero{min-height:650px}.hero-copy{padding:78px 22px 92px}.morph-stack{line-height:.96}.morph-word{font-size:clamp(2.9rem,13vw,4.7rem);letter-spacing:.005em}.morph-word:nth-child(2){padding-left:3vw}.morph-word:nth-child(3){padding-left:6vw}.morph-word.long,.morph-word.experiences{font-size:clamp(1.35rem,6.3vw,2rem);padding-left:12vw;margin-top:26px;letter-spacing:.015em}.morph-word.experiences{margin-top:3px}.hero-intro{margin:47px 0 0 12vw;display:block;max-width:265px;font-size:14px}.hero-role{margin-bottom:8px}.hero-tech-a{right:22px;top:23%}.hero-tech-b{display:none}.hero-bottom{left:22px;right:22px}.nav{padding-left:22px;padding-right:22px}}
+
+/* Share the case-link styling and the hero's existing flex gap. */
+.hero-copy > .hero-work-link {
+  margin: 0;
+  flex-shrink: 0;
+  align-self: flex-start;
+  border: 1px solid #000;
+  padding: 10.4px 16px;
+  min-height: 38.4px;
+}
+.hero-copy > .hero-intro {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 100%;
+  flex-shrink: 0;
+  height: auto;
+  min-height: 0;
+}
+
+/* Keep the action independent of the hero's white-to-black color transition.
+   Only opacity, blur and position participate in its entrance. */
+.hero .hero-copy > a.hero-work-link.surface-action {
+  color: #000;
+  letter-spacing: 0 !important;
+  transition-property: opacity, transform, filter, background-color;
+  transition-duration: 352.512ms, 352.512ms, 352.512ms, .22s;
+  transition-delay: var(--hero-delay, 0ms), var(--hero-delay, 0ms), var(--hero-delay, 0ms), 0ms;
+}
+.hero-work-link .hero-action-label {
+  display: inline-grid;
+  white-space: nowrap;
+}
+.hero-action-label::before {
+  content: attr(data-label);
+  visibility: hidden;
+  grid-area: 1 / 1;
+}
+.hero-action-label > [data-word] {
+  grid-area: 1 / 1;
+  width: 0;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+/* Hero copy is readable from the first paint, before entrance scripts resolve. */
+.hero,.hero:not(.resolved),.hero .hero-intro,.hero .hero-intro p {color:#000!important;}

@@ -1,0 +1,352 @@
+/* Reduced portfolio headings; page layouts use their original styles. */
+body[data-site-ui] {
+  --case-heading: clamp(2.7rem, 4.95vw, 5.4rem);
+}
+
+body[data-site-ui] .hero .morph-word:not(.long) { font-size:clamp(2.88rem,7.29vw,7.25rem); }
+body[data-site-ui] .section-head.compact-title > h2 { font-size:clamp(2.7rem,4.95vw,5.4rem) !important; }
+body[data-site-ui] .capabilities-vertical .capability h3 { font-size:clamp(1.8rem,3.33vw,3.735rem) !important; }
+body[data-site-ui] .case-copy h3 { font-size:clamp(1.8rem,3.6vw,3.96rem); }
+body[data-site-ui] .skills h3 { font-size:18px; }
+body[data-site-ui].workflow-page h2:not(.task-prototype *, .mobile-prototype-section *) { font-size:clamp(1.8rem,3.33vw,3.735rem); }
+body[data-site-ui].workflow-page :is(.case-product-gallery, .market-analysis-gallery) > .screen-gallery-head h2 { font-size:clamp(1.395rem,4.14vw,3.735rem); }
+body[data-site-ui].workflow-page .case-challenge h3 { font-size:16.2px; }
+body[data-site-ui].workflow-page .case-navigation a > strong { font-size:var(--case-heading); }
+body[data-site-ui] .request-dialog h2 { font-size:clamp(2.52rem,6.3vw,4.86rem) !important; }
+body[data-site-ui] .contact-dialog h2 { font-size:clamp(2.25rem,6.3vw,3.96rem) !important; }
+
+@media(max-width:700px) {
+  body[data-site-ui] { --case-heading:clamp(2.52rem,11.7vw,3.78rem); }
+  body[data-site-ui] .hero .morph-word:not(.long) { font-size:clamp(2.61rem,11.7vw,4.23rem); }
+  body[data-site-ui] .section-head.compact-title > h2 { font-size:clamp(2.205rem,9vw,3.15rem) !important; }
+  body[data-site-ui] .case-copy h3 { font-size:1.8rem; }
+  body[data-site-ui].service-workspace-case-page .workflow-hero h1 { font-size:clamp(2.025rem,9.45vw,2.88rem); }
+  body[data-site-ui] :is(.request-dialog,.contact-dialog) h2 { font-size:clamp(2.115rem,10.8vw,3.6rem) !important; }
+}
+
+/* Quieter homepage subheadings on wide laptop and desktop windows. */
+@media (min-width:1200px) {
+  body[data-site-ui] .bring .capabilities-vertical .capability h3 { font-size:clamp(1.62rem,2.997vw,3.3615rem) !important; }
+  body[data-site-ui] .work-index .case-copy h3 { font-size:clamp(1.62rem,3.24vw,3.564rem); }
+}
+
+/* Local content-width review: keep hero stages unchanged. */
+body[data-site-ui].workflow-page main > :is(section, figure):not(.hero, .workflow-hero) {
+  --case-gutter: 0px;
+  box-sizing: border-box;
+  width: min(720px, calc(100% - 44px));
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+body[data-site-ui].workflow-page main > .case-outcomes > article {
+  padding-left: 0;
+  padding-right: 0;
+}
+body[data-site-ui].workflow-page main > .mobile-prototype-section {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Reading blocks use the full capped content area, without a second 590px cap. */
+body[data-site-ui].workflow-page main > :not(.workflow-hero) :is(.chapter-copy, .project-snapshot > div, .workflow-content > article, .case-outcomes > article) {
+  max-width: 100%;
+}
+body[data-site-ui].workflow-page main :is(.workflow-content article, .chapter-copy, .project-snapshot > div, .case-outcomes article) > p:not(.case-label) {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Service workspace: interactive and comparison visuals break out of the reading column. */
+body[data-site-ui].workflow-page.service-workspace-case-page main > .case-product-gallery {
+  width: calc(100% - 48px);
+  max-width: none;
+}
+body[data-site-ui].service-workspace-case-page .case-product-gallery > .screen-gallery-head {
+  width: min(720px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+body[data-site-ui].service-workspace-case-page .competitor-positioning-map {
+  width: min(1066px, calc(100vw - 48px));
+  max-width: none;
+  margin-left: calc((100% - min(1066px, 100vw - 48px)) / 2);
+  margin-right: calc((100% - min(1066px, 100vw - 48px)) / 2);
+}
+@media(max-width:700px) {
+  body[data-site-ui].workflow-page.service-workspace-case-page main > .case-product-gallery {width:calc(100% - 32px)}
+  body[data-site-ui].service-workspace-case-page .competitor-positioning-map {width:calc(100vw - 32px);margin-left:calc(50% - 50vw + 16px);margin-right:calc(50% - 50vw + 16px)}
+}
+
+/* Case titles and facts align with the reading column; navigation keeps its original layout. */
+body[data-site-ui].workflow-page main > .workflow-hero {
+  padding-left: max(22px, calc((100% - 720px) / 2));
+  padding-right: max(22px, calc((100% - 720px) / 2));
+}
+body[data-site-ui].workflow-page .workflow-hero h1 {font-size:clamp(40px,5vw,72px)}
+body[data-site-ui].workflow-page h2:not(.task-prototype *, .mobile-prototype-section *) {font-size:clamp(28px,3vw,40px)}
+
+/* Homepage typography only: preserve its original composition and grid. */
+body[data-site-ui]:not(.workflow-page) .capabilities-vertical .capability h3 {font-size:clamp(26px,3vw,36px)!important}
+body[data-site-ui]:not(.workflow-page) .section-head.compact-title > h2 {font-size:clamp(36px,4vw,52px)!important}
+body[data-site-ui]:not(.workflow-page) .case-copy h3 {font-size:clamp(28px,3vw,40px)}
+
+body[data-site-ui].service-workspace-case-page .competitor-positioning-map {width:100%;max-width:720px;margin-left:0;margin-right:0}
+.competitor-map-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0}
+.competitor-map-controls button{border:1px solid currentColor;background:transparent;color:inherit;padding:10px 14px;font:500 13px Arial,sans-serif;cursor:pointer}
+.competitor-map-controls button:hover{background:#49a85d;color:#000}
+.competitor-map-controls button:focus-visible{outline:2px solid #49a85d;outline-offset:3px}
+.competitor-map-controls [data-map-zoom]:not([hidden]){display:flex;align-items:center;gap:10px}
+.competitor-map-controls button:disabled{opacity:.4;cursor:default}
+.competitor-map-viewport{overflow:auto;width:100%}
+body[data-site-ui].service-workspace-case-page .competitor-positioning-map:is(:fullscreen,.is-expanded){position:fixed;inset:0;z-index:10000;width:100vw;max-width:none;height:100dvh;margin:0;padding:16px 24px;background:#111;color:#fff;display:flex;flex-direction:column}
+.competitor-positioning-map.is-map-open .competitor-map-viewport{flex:1;min-height:0;background:#f2f2f2}
+.competitor-positioning-map.is-map-open .competitor-map-controls{flex-shrink:0}
+.competitor-positioning-map .competitor-placement-tooltip{color:#111}
+
+/* Homepage composition stays paired; only its shared inner width is capped. */
+body[data-site-ui]:not(.workflow-page) :is(.bring,.work-index,.about) > :is(.section-head,.capabilities,.case-index,.about-grid,.geometry-landing) {
+  box-sizing:border-box;
+  width:100%;
+  max-width:1066px;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+body[data-site-ui]:not(.workflow-page) .work-index .case-split {column-gap:clamp(28px,3vw,48px)}
+
+/* Match the inset used by the two-column What I Bring rows. */
+body[data-site-ui]:not(.workflow-page) .work-index .case-split {
+  box-sizing:border-box;
+  min-width:0;
+  width:100%;
+  padding-left:clamp(24px,4.5vw,72px);
+  padding-right:clamp(24px,4.5vw,72px);
+}
+body[data-site-ui]:not(.workflow-page) .work-index .case-split > * {min-width:0}
+@media(max-width:700px) {
+  body[data-site-ui]:not(.workflow-page) .work-index .case-split {padding-left:0;padding-right:0}
+}
+
+/* About uses the same inner content edges as Bring and Selected Work. */
+body[data-site-ui]:not(.workflow-page) .about > .about-grid {
+  box-sizing:border-box;
+  padding-left:clamp(24px,4.5vw,72px);
+  padding-right:clamp(24px,4.5vw,72px);
+  min-width:0;
+}
+body[data-site-ui]:not(.workflow-page) .about-grid > * {min-width:0}
+@media(max-width:700px) {
+  body[data-site-ui]:not(.workflow-page) .about > .about-grid {padding-left:0;padding-right:0}
+}
+
+/* One set of content insets and card metrics for the homepage. */
+body[data-site-ui]:not(.workflow-page) {
+  --home-content-inset:clamp(24px,4.5vw,72px);
+  --home-card-space:48px;
+}
+body[data-site-ui]:not(.workflow-page) .bring .capabilities-vertical .capability,
+body[data-site-ui]:not(.workflow-page) .work-index .case-split,
+body[data-site-ui]:not(.workflow-page) .about > .about-grid {
+  padding-left:var(--home-content-inset)!important;
+  padding-right:var(--home-content-inset)!important;
+}
+body[data-site-ui]:not(.workflow-page) .work-index .case-index {
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  grid-auto-rows:1fr;
+}
+body[data-site-ui]:not(.workflow-page) .work-index .case-index > .case {
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  padding:var(--home-card-space) 0;
+  margin:0;
+}
+body[data-site-ui]:not(.workflow-page) .work-index .case-split {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-items:center;
+}
+body[data-site-ui]:not(.workflow-page) .work-index .case-split > .case-copy {padding-top:0;padding-bottom:0}
+body[data-site-ui]:not(.workflow-page) .work-index .case-split > .case-visual {
+  box-sizing:border-box;
+  width:100%;
+  height:auto!important;
+  aspect-ratio:4 / 3;
+  margin:0;
+}
+@media(max-width:700px) {
+  body[data-site-ui]:not(.workflow-page) {--home-content-inset:0px;--home-card-space:32px}
+  body[data-site-ui]:not(.workflow-page) .work-index .case-index {grid-auto-rows:auto}
+  body[data-site-ui]:not(.workflow-page) .work-index .case-split {grid-template-columns:minmax(0,1fr);row-gap:24px}
+}
+
+/* Market Analysis: a compact opening, generous chapter rhythm and full-width gallery. */
+body[data-site-ui].workflow-page.market-analysis-case-page main > .workflow-hero {
+  padding-top:calc(var(--global-header-height,48px) + 32px);
+}
+body[data-site-ui].workflow-page.market-analysis-case-page :is(.workflow-content > article,.case-chapter,.case-outcomes > article) {
+  padding-top:61.44px;
+  padding-bottom:61.44px;
+}
+body[data-site-ui].workflow-page.market-analysis-case-page .usability-section {
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+  padding-top:61.44px;
+  padding-bottom:61.44px;
+}
+body[data-site-ui].workflow-page.market-analysis-case-page .usability-section > article {
+  width:100%;
+  padding-top:0;
+  padding-bottom:0;
+}
+body[data-site-ui].workflow-page.market-analysis-case-page .usability-feedback {width:100%;max-width:none;margin:0}
+body[data-site-ui].workflow-page.market-analysis-case-page main > .market-analysis-gallery {
+  width:100%;
+  max-width:none;
+  margin-left:0;
+  margin-right:0;
+  padding-left:0;
+  padding-right:0;
+  overflow:visible;
+}
+
+/* Balance space around the testing-report image while keeping the text below in place. */
+body[data-site-ui].workflow-page.market-analysis-case-page .usability-section {
+  padding-top:0;
+  gap:93.44px;
+}
+
+/* Product impact: an editorial metric and a compact product timeline. */
+body[data-site-ui].market-analysis-case-page #product-results .impact-hero-stat {
+  margin:32px 0 48px;
+  padding:36px 0;
+  border-top:1px solid var(--case-line);
+  border-bottom:1px solid var(--case-line);
+}
+body[data-site-ui].market-analysis-case-page #product-results .impact-number {
+  display:block;font:700 clamp(80px,14vw,156px)/.95 var(--sans,"DM Sans",sans-serif);letter-spacing:-.065em;
+}
+body[data-site-ui].market-analysis-case-page #product-results .impact-number > span {color:#318a45}
+body[data-site-ui].market-analysis-case-page #product-results .impact-stat-copy {margin-top:24px;max-width:480px}
+body[data-site-ui].market-analysis-case-page #product-results h3 {font-size:24px;line-height:1.2;letter-spacing:-.02em;margin:0 0 12px}
+body[data-site-ui].market-analysis-case-page #product-results .impact-stat-copy p {font-size:17px;line-height:1.6;margin:0 0 16px}
+body[data-site-ui].market-analysis-case-page #product-results .impact-stat-copy > a {font-size:13px;text-decoration:underline;text-underline-offset:4px}
+body[data-site-ui].market-analysis-case-page #product-results .impact-milestones {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:24px;border-top:1px solid var(--case-line)}
+body[data-site-ui].market-analysis-case-page #product-results .impact-milestone {padding:28px 24px 24px 0;min-width:0}
+body[data-site-ui].market-analysis-case-page #product-results .impact-milestone + .impact-milestone {border-left:1px solid var(--case-line);padding-left:24px;padding-right:0}
+body[data-site-ui].market-analysis-case-page #product-results .impact-year {display:block;font:700 clamp(30px,5vw,48px)/1.1 var(--sans,"DM Sans",sans-serif);letter-spacing:-.04em;margin-bottom:24px}
+body[data-site-ui].market-analysis-case-page #product-results .impact-milestone p {font-size:16px;line-height:1.6;margin:0}
+body[data-site-ui].market-analysis-case-page #product-results .impact-context-note {font-size:13px;line-height:1.6;color:#555;margin:24px 0}
+body[data-site-ui].market-analysis-case-page #product-results .impact-sources {font-size:12px;line-height:1.6;border-top:1px solid var(--case-line);padding-top:20px}
+@media(max-width:520px){
+body[data-site-ui].market-analysis-case-page #product-results .impact-milestones{grid-template-columns:minmax(0,1fr)}
+body[data-site-ui].market-analysis-case-page #product-results .impact-milestone + .impact-milestone{border-left:0;border-top:1px solid var(--case-line);padding-left:0}
+}
+
+/* Three equally weighted product outcomes. */
+body[data-site-ui].market-analysis-case-page #product-results .impact-three-up {
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:32px 0 24px;border-top:1px solid var(--case-line);border-bottom:1px solid var(--case-line);
+}
+body[data-site-ui].market-analysis-case-page #product-results .impact-result {min-width:0;padding:28px 20px}
+body[data-site-ui].market-analysis-case-page #product-results .impact-result:first-child {padding-left:0}
+body[data-site-ui].market-analysis-case-page #product-results .impact-result:last-child {padding-right:0}
+body[data-site-ui].market-analysis-case-page #product-results .impact-result + .impact-result {border-left:1px solid var(--case-line)}
+body[data-site-ui].market-analysis-case-page #product-results .impact-result-number {display:flex;align-items:center;min-height:64px;font:700 clamp(28px,4vw,46px)/1.1 var(--sans,"DM Sans",sans-serif);letter-spacing:-.05em;white-space:nowrap;margin-bottom:24px}
+body[data-site-ui].market-analysis-case-page #product-results .impact-result-number > span {color:#318a45;margin-left:6px}
+body[data-site-ui].market-analysis-case-page #product-results .impact-result h3 {font-size:20px;line-height:1.25;min-height:50px;margin:0 0 12px}
+body[data-site-ui].market-analysis-case-page #product-results .impact-result p {font-size:15px;line-height:1.6;margin:0}
+@media(max-width:600px){
+body[data-site-ui].market-analysis-case-page #product-results .impact-three-up{grid-template-columns:minmax(0,1fr)}
+body[data-site-ui].market-analysis-case-page #product-results .impact-result{padding:24px 0}
+body[data-site-ui].market-analysis-case-page #product-results .impact-result + .impact-result{border-left:0;border-top:1px solid var(--case-line)}
+body[data-site-ui].market-analysis-case-page #product-results .impact-result h3{min-height:0}
+}
+
+body[data-site-ui].market-analysis-case-page #product-results a {
+  transition:color .22s ease,text-decoration-color .22s ease;
+  text-underline-offset:4px;
+}
+body[data-site-ui].market-analysis-case-page #product-results a:is(:hover,:focus-visible) {
+  color:var(--site-action-green,#49a85d);
+  text-decoration:underline;
+  text-decoration-color:currentColor;
+}
+body[data-site-ui].market-analysis-case-page #product-results a:focus-visible {
+  outline:2px solid var(--site-action-green,#49a85d);
+  outline-offset:4px;
+}
+
+body[data-site-ui].market-analysis-case-page #product-results .impact-sources {
+  border-top:0;
+  padding-top:0;
+  margin-top:12px;
+}
+body[data-site-ui].market-analysis-case-page #product-results .impact-three-up {
+  margin-bottom:12px;
+}
+
+/* Gallery typography follows the shared case labels and action controls. */
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery :is(.product-gallery-toolbar > span,.product-shot figcaption,.product-scroll-status,.product-scroll-progress,.product-scroll-count) {
+  font-family:"DM Sans","Helvetica Neue",Arial,sans-serif;
+  font-size:12px;
+  font-weight:500;
+  line-height:1.4;
+  letter-spacing:0;
+}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-shot figcaption p {font:inherit;letter-spacing:inherit}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-scroll-skip {
+  font:500 14px/1.4 "DM Sans","Helvetica Neue",Arial,sans-serif;
+  letter-spacing:0;
+}
+body[data-site-ui].market-analysis-case-page .product-lightbox :is(figcaption,.product-lightbox-counter,.product-lightbox-hint) {
+  font:500 12px/1.4 "DM Sans","Helvetica Neue",Arial,sans-serif;
+  letter-spacing:0;
+}
+@media(max-width:700px){
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery :is(.product-gallery-toolbar > span,.product-shot figcaption,.product-scroll-status,.product-scroll-progress,.product-scroll-count){font-size:10px}
+}
+
+/* Shared case rhythm: the same header clearance and chapter spacing. */
+body[data-site-ui].workflow-page {
+  --case-rhythm:61.44px;
+  --case-section-space:61.44px;
+  --case-block-space:61.44px;
+}
+body[data-site-ui].workflow-page main > .workflow-hero {
+  padding-top:calc(var(--global-header-height,48px) + 32px);
+}
+body[data-site-ui].workflow-page main > .workflow-hero > .case-label {margin:0 0 20px}
+body[data-site-ui].workflow-page main > .workflow-hero h1 {margin-top:0;margin-bottom:32px}
+body[data-site-ui].workflow-page:not(.market-analysis-case-page) main > :is(.workflow-content,.case-chapters,.case-outcomes) {
+  padding-top:0;padding-bottom:0;row-gap:0;
+}
+body[data-site-ui].workflow-page:not(.market-analysis-case-page) :is(.workflow-content > article,.case-chapter,.case-outcomes > article) {
+  margin-top:0;margin-bottom:0;padding-top:61.44px;padding-bottom:61.44px;
+}
+body[data-site-ui].workflow-page:not(.market-analysis-case-page) main > .project-snapshot {
+  padding-top:61.44px;padding-bottom:61.44px;
+}
+body[data-site-ui].workflow-page.service-workspace-case-page .workflow-hero + .workflow-content > article:first-child {
+  padding-top:61.44px;
+}
+
+/* Native horizontal gallery: equal outer spacing, captions remain with each image. */
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery {display:block;background:#111;color:#fff}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-scroll {height:auto!important;margin:0;padding:48px 0}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-scroll-sticky {position:static;height:auto;min-height:0;overflow:visible}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-gallery-toolbar {position:static;display:flex;justify-content:space-between;align-items:center;margin:0 32px 32px;padding:0;width:auto;transform:none}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-scroll-skip {position:static;opacity:1!important}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-mosaic {position:relative;display:flex;width:100%;height:auto;gap:32px;padding:0 max(24px,calc((100% - 1066px)/2));overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;transform:none!important;will-change:auto}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-shot {flex:0 0 min(85vw,1066px);width:min(85vw,1066px);scroll-snap-align:center;display:flex;flex-direction:column}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-shot img {width:100%;height:min(62vh,640px);aspect-ratio:auto;object-fit:contain}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-shot figcaption {padding:24px 0 0;margin:0}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-scroll-status {position:static;display:flex;justify-content:space-between;align-items:center;margin:32px 32px 0;padding:24px 0 0;gap:20px}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-scroll-controls {position:static;display:flex;gap:12px;transform:none}
+@media(max-width:700px){
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-scroll{padding:32px 0}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-gallery-toolbar{margin:0 22px 24px}
+body[data-site-ui].market-analysis-case-page .market-analysis-gallery .product-scroll-status{margin:24px 22px 0}
+}
