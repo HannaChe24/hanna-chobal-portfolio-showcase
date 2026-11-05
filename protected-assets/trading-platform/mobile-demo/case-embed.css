@@ -1,0 +1,5 @@
+.case-embed,.case-embed body{background:#f2f2f2;overflow:hidden}
+.case-embed .intro{display:none}
+.case-embed .stage{display:flex;justify-content:center;align-items:center;min-height:100dvh;width:100%;max-width:none;margin:0;padding:16px 12px;gap:0}
+.case-embed .device-wrap{width:min(391px,100%);zoom:.8;flex-shrink:0}
+
